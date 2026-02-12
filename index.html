@@ -78,6 +78,23 @@
         width: 100%;
       }
     </style>
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1369029608310562');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1369029608310562&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </head>
   <body class="bg-gray-50 text-gray-900">
     <!-- Navbar Pill Design -->
@@ -85,22 +102,10 @@
       <nav
         class="max-w-3xl mx-auto glass border border-white/50 shadow-[0_12px_40px_rgba(0,0,0,0.12)] rounded-full px-8 py-4"
       >
-        <div class="flex justify-between items-center">
-          <div class="flex-shrink-0">
-            <a href="#" class="block">
-              <img
-                class="h-8 w-auto"
-                src="assets/images/2-2.png"
-                alt="Langitlangit Logo"
-                onerror="
-                  this.src = 'https://via.placeholder.com/140x50?text=LOGO'
-                "
-              />
-            </a>
-          </div>
+        <div class="flex justify-between items-center ">
 
-          <div class="hidden md:flex space-x-10 items-center">
-            <a
+            <div class="flex item-center justify-between gap-5">
+                <a
               href="#"
               class="nav-pill-link text-[13px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition"
               >About</a
@@ -115,6 +120,25 @@
               class="nav-pill-link text-[13px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition"
               >Contacts</a
             >
+          </div>
+
+          <div class="flex-shrink-0">
+            <a href="#" class="block">
+              <img
+                class="h-8 w-auto"
+                src="assets/images/2-2.png"
+                alt="Langitlangit Logo"
+                onerror="
+                  this.src = 'https://via.placeholder.com/140x50?text=LOGO'
+                "
+              />
+            </a>
+          </div>
+
+        
+
+          <div class="hidden md:flex space-x-10 items-center">
+        
             <div
               class="flex items-center space-x-5 border-l pl-8 border-gray-200"
             >
@@ -167,22 +191,27 @@
         <div class="absolute inset-0 hero-gradient"></div>
       </div>
       <div
-        class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20"
+        class="relative z-10 max-w-5xl mx-auto px-6  text-white pt-20"
       >
+        <img
+          src="assets/images/1-1.png"
+          alt="Logo"
+          class="h-28 md:h-36 mb-8"
+        />
         <h1
-          class="text-5xl md:text-8xl font-black leading-[1.05] mb-10 tracking-tighter"
+          class="text-4xl md:text-7xl font-black leading-[0.6] mb-10 tracking-tighter"
         >
           Kegagalan Bangun Rumah<br />
           <span class="text-blue-400 italic">Selalu Dimulai</span> dari Tim yang
           Salah
         </h1>
         <h2
-          class="text-xl md:text-3xl font-medium mb-12 max-w-3xl mx-auto opacity-95 leading-relaxed text-blue-50"
+          class="text-lg md:text-2xl font-medium mb-12 max-w-3xl  opacity-95 leading-relaxed text-blue-50"
         >
           Masalah bangun rumah itu polanya sama
         </h2>
         <p
-          class="text-base md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light"
+          class="text-base md:text-xl text-gray-300 max-w-3xl leading-relaxed font-light"
         >
           Design tidak terkontrol, Estimasi biaya kurang detail, Spesifikasi
           material abu-abu hingga ke perubahan di lapangan tanpa koordinasi
@@ -192,9 +221,9 @@
 
     <!-- Intro Section -->
     <section class="py-32 bg-white">
-      <div class="max-w-5xl mx-auto px-6 text-center">
+      <div class="max-w-5xl mx-auto px-6 md:px-1">
         <h2
-          class="text-4xl md:text-6xl font-black mb-14 leading-tight tracking-tight text-gray-900"
+          class="text-lg md:text-6xl font-black mb-14 leading-tight tracking-tight text-gray-900"
         >
           Disini kami kontraktor & designer berbeda.<br />
           <span class="text-primary"
@@ -202,7 +231,7 @@
           >
         </h2>
         <p
-          class="text-lg md:text-2xl text-gray-500 leading-relaxed font-medium italic max-w-4xl mx-auto"
+          class="text-lg md:text-2xl text-gray-500 leading-relaxed font-medium italic max-w-4xl"
         >
           Langitlangit.id mendesain & membangun sesuai kebutuhan seluruh
           penghuni, spesifikasi & material banyak pilihan, terstandarisasi SNI.
@@ -381,36 +410,36 @@
             </p>
           </div>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+            <div class="aspect-[9/16] rounded-[3rem] overflow-hidden shadow-xl">
               <img
-                src="assets/images/sebuah-vila-modern-yang-facade206-768x1408.png"
+                src="assets/images/designs/1.jpeg"
                 class="w-full h-full object-cover hover:scale-105 transition duration-700"
                 onerror="
                   this.src = 'https://via.placeholder.com/600x800?text=Design+1'
                 "
               />
             </div>
-            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+            <div class="aspect-[9/16] rounded-[3rem] overflow-hidden shadow-xl">
               <img
-                src="assets/images/6732f6c5-aaf7-412b-b0bf-e4fa743ef99e-838x1257.png"
+                src="assets/images/designs/2.jpeg"
                 class="w-full h-full object-cover hover:scale-105 transition duration-700"
                 onerror="
                   this.src = 'https://via.placeholder.com/600x800?text=Design+2'
                 "
               />
             </div>
-            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+            <div class="aspect-[9/16] rounded-[3rem] overflow-hidden shadow-xl">
               <img
-                src="assets/images/enscape-2025-05-22-14-57-53-images208-838x1048.png"
+                src="assets/images/designs/3.jpeg"
                 class="w-full h-full object-cover hover:scale-105 transition duration-700"
                 onerror="
                   this.src = 'https://via.placeholder.com/600x800?text=Design+3'
                 "
               />
             </div>
-            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+            <div class="aspect-[9/16] rounded-[3rem] overflow-hidden shadow-xl">
               <img
-                src="assets/images/d8c78590-9ec2-492d-8167-e1a5d80b7a01-838x1257.png"
+                src="assets/images/designs/4.jpeg"
                 class="w-full h-full object-cover hover:scale-105 transition duration-700"
                 onerror="
                   this.src = 'https://via.placeholder.com/600x800?text=Design+4'
@@ -431,36 +460,36 @@
             </p>
           </div>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-            <div class="aspect-square rounded-[3rem] overflow-hidden shadow-xl">
+            <div class="aspect-[9/16] rounded-[3rem] overflow-hidden shadow-xl">
               <img
-                src="assets/images/whatsapp20image202025-09-0820at2014.54.56202-838x838.jpg"
+                src="assets/images/sipils/01.jpeg"
                 class="w-full h-full object-cover"
                 onerror="
                   this.src = 'https://via.placeholder.com/600x600?text=Civil+1'
                 "
               />
             </div>
-            <div class="aspect-square rounded-[3rem] overflow-hidden shadow-xl">
+            <div class="aspect-[9/16] rounded-[3rem] overflow-hidden shadow-xl">
               <img
-                src="assets/images/whatsapp20image202025-09-0820at2013.30.34201-838x838.jpg"
+                src="assets/images/sipils/02.jpeg"
                 class="w-full h-full object-cover"
                 onerror="
                   this.src = 'https://via.placeholder.com/600x600?text=Civil+2'
                 "
               />
             </div>
-            <div class="aspect-square rounded-[3rem] overflow-hidden shadow-xl">
+            <div class="aspect-[9/16] rounded-[3rem] overflow-hidden shadow-xl">
               <img
-                src="assets/images/3-768x1408.png"
+                src="assets/images/sipils/03.jpeg"
                 class="w-full h-full object-cover"
                 onerror="
                   this.src = 'https://via.placeholder.com/600x600?text=Civil+3'
                 "
               />
             </div>
-            <div class="aspect-square rounded-[3rem] overflow-hidden shadow-xl">
+            <div class="aspect-[9/16] rounded-[3rem] overflow-hidden shadow-xl">
               <img
-                src="assets/images/2.png"
+                src="assets/images/sipils/04.jpeg"
                 class="w-full h-full object-cover"
                 onerror="
                   this.src = 'https://via.placeholder.com/600x600?text=Civil+4'
@@ -481,9 +510,9 @@
             </p>
           </div>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+            <div class="aspect-[9/16] rounded-[3rem] overflow-hidden shadow-xl">
               <img
-                src="assets/images/img-6882202-838x1536.jpg"
+                src="assets/images/interiors/01.jpeg"
                 class="w-full h-full object-cover"
                 onerror="
                   this.src =
@@ -491,9 +520,9 @@
                 "
               />
             </div>
-            <div class="aspect-square rounded-[3rem] overflow-hidden shadow-xl">
+            <div class="aspect-[9/16] rounded-[3rem] overflow-hidden shadow-xl">
               <img
-                src="assets/images/whatsapp20image202025-09-0820at2013.30.37-838x838.jpg"
+                src="assets/images/interiors/02.jpeg"
                 class="w-full h-full object-cover"
                 onerror="
                   this.src =
@@ -501,9 +530,9 @@
                 "
               />
             </div>
-            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+            <div class="aspect-[9/16] rounded-[3rem] overflow-hidden shadow-xl">
               <img
-                src="assets/images/img-6891202-838x1536.jpg"
+                src="assets/images/interiors/03.jpeg"
                 class="w-full h-full object-cover"
                 onerror="
                   this.src =
@@ -511,9 +540,9 @@
                 "
               />
             </div>
-            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+            <div class="aspect-[9/16] rounded-[3rem] overflow-hidden shadow-xl">
               <img
-                src="assets/images/494dfe81-e949-400c-8a65-62e84c8993ca-838x1257.png"
+                src="assets/images/interiors/04.jpeg"
                 class="w-full h-full object-cover"
                 onerror="
                   this.src =
@@ -792,10 +821,8 @@
                 class="aspect-[9/16] bg-black rounded-[4rem] overflow-hidden shadow-2xl"
               >
                 <video
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-contain"
                   src="assets/videos/tests1.mp4"
-                  muted
-                  loop
                   playsinline
                   controls
                 ></video>
@@ -806,10 +833,8 @@
                 class="aspect-[9/16] bg-black rounded-[4rem] overflow-hidden shadow-2xl"
               >
                 <video
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-contain"
                   src="assets/videos/tests1.1.mp4"
-                  muted
-                  loop
                   playsinline
                   controls
                 ></video>
@@ -868,9 +893,9 @@
               </button>
             </form>
           </div>
-          <div class="w-full lg:w-1/2 min-h-[600px]">
+          <div class="w-full lg:w-1/2 min-h-[60px]">
             <img
-              class="w-full h-full object-cover"
+              class=" object-cover size-25"
               src="assets/images/1-1.png"
               alt="Contact"
               onerror="
@@ -889,11 +914,12 @@
         class="max-w-7xl mx-auto px-6 text-center border-t border-gray-100 pt-24"
       >
         <img
-          class="h-8 w-auto mx-auto mb-14 opacity-30 grayscale"
+          class="w-10 mx-auto mb-14 opacity-30 grayscale"
           src="assets/images/2-2.png"
           alt="Footer Logo"
           onerror="this.style.display = 'none'"
         />
+
         <p
           class="text-gray-400 text-[12px] font-bold tracking-[0.4em] uppercase"
         >
