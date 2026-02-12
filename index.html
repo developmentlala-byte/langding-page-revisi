@@ -80,19 +80,38 @@
     </style>
     <!-- Meta Pixel Code -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1369029608310562');
-      fbq('track', 'PageView');
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "1369029608310562");
+      fbq("track", "PageView");
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1369029608310562&ev=PageView&noscript=1"
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1369029608310562&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
   </head>
@@ -102,10 +121,9 @@
       <nav
         class="max-w-3xl mx-auto glass border border-white/50 shadow-[0_12px_40px_rgba(0,0,0,0.12)] rounded-full px-8 py-4"
       >
-        <div class="flex justify-between items-center ">
-
-            <div class="flex item-center justify-between gap-5">
-                <a
+        <div class="flex justify-between items-center">
+          <div class="flex item-center justify-between gap-5">
+            <a
               href="#"
               class="nav-pill-link text-[13px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition"
               >About</a
@@ -135,10 +153,7 @@
             </a>
           </div>
 
-        
-
           <div class="hidden md:flex space-x-10 items-center">
-        
             <div
               class="flex items-center space-x-5 border-l pl-8 border-gray-200"
             >
@@ -190,14 +205,8 @@
       >
         <div class="absolute inset-0 hero-gradient"></div>
       </div>
-      <div
-        class="relative z-10 max-w-5xl mx-auto px-6  text-white pt-20"
-      >
-        <img
-          src="assets/images/1-1.png"
-          alt="Logo"
-          class="h-28 md:h-36 mb-8"
-        />
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-white pt-20">
+        <img src="assets/images/1-1.png" alt="Logo" class="h-28 md:h-36 mb-8" />
         <h1
           class="text-4xl md:text-7xl font-black leading-[0.6] mb-10 tracking-tighter"
         >
@@ -206,7 +215,7 @@
           Salah
         </h1>
         <h2
-          class="text-lg md:text-2xl font-medium mb-12 max-w-3xl  opacity-95 leading-relaxed text-blue-50"
+          class="text-lg md:text-2xl font-medium mb-12 max-w-3xl opacity-95 leading-relaxed text-blue-50"
         >
           Masalah bangun rumah itu polanya sama
         </h2>
@@ -895,7 +904,7 @@
           </div>
           <div class="w-full lg:w-1/2 min-h-[60px]">
             <img
-              class=" object-cover size-25"
+              class="object-cover size-25"
               src="assets/images/1-1.png"
               alt="Contact"
               onerror="
