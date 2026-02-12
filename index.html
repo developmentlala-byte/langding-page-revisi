@@ -127,35 +127,40 @@
         </div>
       </a>
     </div>
-    <!-- Navbar Pill Design -->
+    <!-- Navbar -->
     <div class="fixed top-8 left-0 w-full z-50 px-4">
-      <nav class="max-w-3xl mx-auto glass border border-white/50 shadow-[0_12px_40px_rgba(0,0,0,0.12)] rounded-full px-8 py-4">
+      <nav class="max-w-3xl mx-auto glass border border-white/50 shadow-[0_12px_40px_rgba(0,0,0,0.12)] rounded-full px-6 py-3 md:py-3.5">
         <div class="flex justify-between items-center">
-          <div class="flex item-center justify-between gap-5">
-            <a href="#" class="nav-pill-link text-[13px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition">About</a>
-            <a href="#" class="nav-pill-link text-[13px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition">Services</a>
-            <a href="#" class="nav-pill-link text-[13px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition">Contacts</a>
-          </div>
-
+          <!-- Logo di Kiri -->
           <div class="flex-shrink-0">
             <a href="#" class="block">
-              <img class="h-8 w-auto" src="assets/images/2-2.png" alt="Langitlangit Logo" onerror="this.src = 'https://via.placeholder.com/140x50?text=LOGO'" />
+              <img class="h-6 md:h-7 w-auto" src="assets/images/2-2.png" alt="Langitlangit Logo" onerror="this.src = 'https://via.placeholder.com/100x30?text=LOGO'" />
             </a>
           </div>
 
-          <div class="hidden md:flex space-x-10 items-center">
-            <div class="flex items-center space-x-5 border-l pl-8 border-gray-200">
-              <a href="#" class="text-gray-500 hover:text-primary transition text-lg">📞</a>
-              <a href="#" class="text-gray-500 hover:text-primary transition text-lg">✉️</a>
-            </div>
+          <!-- Menu Navigasi Tengah (Hidden on Mobile) -->
+          <div class="hidden md:flex items-center gap-6">
+            <a href="#" class="nav-pill-link text-[11px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition">About</a>
+            <a href="#" class="nav-pill-link text-[11px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition">Services</a>
+            <a href="#" class="nav-pill-link text-[11px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition">Contacts</a>
           </div>
 
-          <div class="md:hidden">
-            <button class="p-1 text-gray-900">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
+          <!-- Bagian Kanan (Icons & Hamburger) -->
+          <div class="flex items-center gap-4">
+            <!-- Icons (Hidden on Mobile) -->
+            <div class="hidden md:flex items-center space-x-4 border-l pl-6 border-gray-200">
+              <a href="#" class="text-gray-500 hover:text-primary transition text-sm">📞</a>
+              <a href="#" class="text-gray-500 hover:text-primary transition text-sm">✉️</a>
+            </div>
+
+            <!-- Tombol Hamburger (Mobile Only) -->
+            <div class="md:hidden">
+              <button class="p-2 text-gray-900 hover:text-primary transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -166,14 +171,15 @@
       <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url(&quot;assets/images/Hero.jpg&quot;); background-color: #1a1a1a">
         <div class="absolute inset-0 hero-gradient"></div>
       </div>
-      <div class="relative z-10 max-w-5xl mx-auto px-6 text-white pt-20">
-        <img src="assets/images/1-1.png" alt="Logo" class="h-28 md:h-36 mb-8" />
-        <h1 class="text-4xl md:text-7xl font-black leading-[0.6] mb-10 tracking-tighter">
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-white pt-20 text-center md:text-left">
+        <img src="assets/images/1-1.png" alt="Logo" class="h-20 md:h-24 mb-10 mx-auto md:mx-0" />
+        <!-- FIX: Spasi antar baris (leading) diatur ulang agar tidak bertindih di mobile -->
+        <h1 class="text-3xl md:text-6xl font-black leading-tight md:leading-[1.1] mb-8 tracking-tighter">
           Kegagalan Bangun Rumah<br />
           <span class="text-blue-400 italic">Selalu Dimulai</span> dari Tim yang Salah
         </h1>
-        <h2 class="text-lg md:text-2xl font-medium mb-12 max-w-3xl opacity-95 leading-relaxed text-blue-50">Masalah bangun rumah itu polanya sama</h2>
-        <p class="text-base md:text-xl text-gray-300 max-w-3xl leading-relaxed font-light">Design tidak terkontrol, Estimasi biaya kurang detail, Spesifikasi material abu-abu hingga ke perubahan di lapangan tanpa koordinasi</p>
+        <h2 class="text-lg md:text-xl font-medium mb-10 max-w-2xl opacity-90 leading-relaxed text-blue-50">Masalah bangun rumah itu polanya sama</h2>
+        <p class="text-base md:text-lg text-gray-300 max-w-2xl leading-relaxed font-light">Design tidak terkontrol, Estimasi biaya kurang detail, Spesifikasi material abu-abu hingga ke perubahan di lapangan tanpa koordinasi</p>
       </div>
     </section>
 
