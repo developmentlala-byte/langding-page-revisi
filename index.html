@@ -1,623 +1,979 @@
-<!DOCTYPE html>
-<html  >
-<head>
-  <!-- Site made with Mobirise Website Builder v6.1.12, https://mobirise.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v6.1.12, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/2-2.png" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
-  <title>Home</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/parallax/jarallax.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=M5CPJZ"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=M5CPJZ" type="text/css">
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Langitlangit.id - Home</title>
 
-  
-  
-  
-</head>
-<body>
-  
-  <section data-bs-version="5.1" class="menu menu3 cid-vaO4p0Qyyb" once="menu" id="menu03-l">
-	
+    <!-- Typography: Preload Inter Tight -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
+      />
+    </noscript>
 
-	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-		<div class="container">
-			<div class="navbar-brand">
-				<span class="navbar-logo">
-					<a href="https://mobiri.se">
-						<img src="assets/images/2-2.png" alt="Mobirise Website Builder" style="height: 4rem;">
-					</a>
-				</span>
-				
-			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<div class="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-					<li class="nav-item">
-						<a class="nav-link link text-black display-4" href="https://mobiri.se">About</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link link text-black show display-4" href="https://mobiri.se" aria-expanded="false">Services</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link link text-black display-4" href="https://mobiri.se">Contacts</a>
-					</li>
-				</ul>
-				<div class="icons-menu">
-					<a class="iconfont-wrapper" href="https://mobiri.se">
-						<span class="p-2 mbr-iconfont mobi-mbri-phone mobi-mbri"></span>
-					</a>
-					<a class="iconfont-wrapper" href="https://mobiri.se">
-						<span class="p-2 mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
-					</a>
-					<a class="iconfont-wrapper" href="https://mobiri.se">
-						<span class="p-2 mbr-iconfont mobi-mbri-map-pin mobi-mbri"></span>
-					</a>
-					
-				</div>
-				
-			</div>
-		</div>
-	</nav>
-</section>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter Tight", "sans-serif"],
+            },
+            colors: {
+              primary: "#2563eb",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <style>
+      body {
+        font-family: "Inter Tight", sans-serif;
+        /* Menggunakan spacing natural agar tidak tajam/rapet */
+        letter-spacing: 0.02em;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .hero-gradient {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.35));
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      /* Slider fix */
+      .tns-inner {
+        margin: 0 !important;
+      }
+      .tns-item {
+        height: auto !important;
+      }
 
-<section data-bs-version="5.1" class="header16 cid-vaNAl3xSUe mbr-fullscreen mbr-parallax-background" id="header17-0">
-  
-  
-  <div class="container-fluid">
-    <div class="row">
-      <div class="content-wrap col-12 col-md-12">
-        <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1"><strong>Kegagalan Bangun </strong><br><strong>Rumah&nbsp;</strong><strong>Selalu di Mulai&nbsp;</strong><strong><br></strong><strong>dari Tim yang Salah</strong></h1>
-        <h2 class="mbr-section-subtitle mbr-fonts-style mbr-white mb-4 display-5">
-          Masalah bangun rumah itu polanya sama</h2>
-        <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-4">Design tidak terkontrol, Estimasi biaya kurang detail,Spesifikasi material abu abu <br>hingga ke perubahan di lapangan tanpa koordinasi</p>
-        
-      </div>
+      .nav-pill-link:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #2563eb;
+        transition: width 0.3s;
+      }
+      .nav-pill-link:hover:after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Navbar Pill Design -->
+    <div class="fixed top-8 left-0 w-full z-50 px-4">
+      <nav
+        class="max-w-3xl mx-auto glass border border-white/50 shadow-[0_12px_40px_rgba(0,0,0,0.12)] rounded-full px-8 py-4"
+      >
+        <div class="flex justify-between items-center">
+          <div class="flex-shrink-0">
+            <a href="#" class="block">
+              <img
+                class="h-8 w-auto"
+                src="assets/images/2-2.png"
+                alt="Langitlangit Logo"
+                onerror="
+                  this.src = 'https://via.placeholder.com/140x50?text=LOGO'
+                "
+              />
+            </a>
+          </div>
+
+          <div class="hidden md:flex space-x-10 items-center">
+            <a
+              href="#"
+              class="nav-pill-link text-[13px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition"
+              >About</a
+            >
+            <a
+              href="#"
+              class="nav-pill-link text-[13px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="nav-pill-link text-[13px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition"
+              >Contacts</a
+            >
+            <div
+              class="flex items-center space-x-5 border-l pl-8 border-gray-200"
+            >
+              <a
+                href="#"
+                class="text-gray-500 hover:text-primary transition text-lg"
+                >📞</a
+              >
+              <a
+                href="#"
+                class="text-gray-500 hover:text-primary transition text-lg"
+                >✉️</a
+              >
+            </div>
+          </div>
+
+          <div class="md:hidden">
+            <button class="p-1 text-gray-900">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
     </div>
-  </div>
-</section>
 
-<section data-bs-version="5.1" class="header19 cid-vaUnueyBgo mbr-fullscreen" id="header19-q">
-  
-
-  
-  
-  <div class="container">
-    <div class="row">
-      <div class="content-wrap col-12 col-md-10">
-        <h1 class="mbr-section-title mbr-fonts-style mb-4 display-1"><strong>Disini kami kontraktor &amp; designer berbeda
-</strong><div><strong>Kreatif, Komunikatif
-</strong></div><div><strong>Detail &amp; Akurat</strong></div></h1>
-        <p class="mbr-fonts-style mbr-text mb-4 display-7">
-          Langitlangit.id mendesain &amp; membangun sesuai kebutuhan seluruh penghuni, spesifikasi &amp; material banyak pilihan, terstandarisasi SNI. Estimasi biaya bangun yang akurat , pengontrolan lapangan yang ketat, timeline sesuai rencana, report digital otomatis
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-cover bg-center z-0"
+        style="
+          background-image: url(&quot;assets/images/Hero.jpg&quot;);
+          background-color: #1a1a1a;
+        "
+      >
+        <div class="absolute inset-0 hero-gradient"></div>
+      </div>
+      <div
+        class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20"
+      >
+        <h1
+          class="text-5xl md:text-8xl font-black leading-[1.05] mb-10 tracking-tighter"
+        >
+          Kegagalan Bangun Rumah<br />
+          <span class="text-blue-400 italic">Selalu Dimulai</span> dari Tim yang
+          Salah
+        </h1>
+        <h2
+          class="text-xl md:text-3xl font-medium mb-12 max-w-3xl mx-auto opacity-95 leading-relaxed text-blue-50"
+        >
+          Masalah bangun rumah itu polanya sama
+        </h2>
+        <p
+          class="text-base md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light"
+        >
+          Design tidak terkontrol, Estimasi biaya kurang detail, Spesifikasi
+          material abu-abu hingga ke perubahan di lapangan tanpa koordinasi
         </p>
-        
-        
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section data-bs-version="5.1" class="features16 cid-vaNGJWL1SD" id="features016-d">  
-  
-  
-  
-  <div class="container">
-    <div class="row justify-content-center mb-5">
-      <div class="col-12 content-head">
-        <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-          <strong>Langkah Awal </strong><br><strong>Paling Aman Bersama langitlangit.id</strong></h4>
-        
+    <!-- Intro Section -->
+    <section class="py-32 bg-white">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2
+          class="text-4xl md:text-6xl font-black mb-14 leading-tight tracking-tight text-gray-900"
+        >
+          Disini kami kontraktor & designer berbeda.<br />
+          <span class="text-primary"
+            >Kreatif, Komunikatif, Detail & Akurat</span
+          >
+        </h2>
+        <p
+          class="text-lg md:text-2xl text-gray-500 leading-relaxed font-medium italic max-w-4xl mx-auto"
+        >
+          Langitlangit.id mendesain & membangun sesuai kebutuhan seluruh
+          penghuni, spesifikasi & material banyak pilihan, terstandarisasi SNI.
+          Estimasi biaya bangun yang akurat, pengontrolan lapangan yang ketat,
+          timeline sesuai rencana, report digital otomatis.
+        </p>
       </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="item features-without-image col-12 col-lg-2">
-        <div class="item-wrapper">
-          <div class="card-box">
-            <div class="img-box">
-              <div class="image-wrapper mb-3">
-                <img src="assets/images/screenshot-2026-02-10.png" alt="Mobirise Website Builder">
+    </section>
+
+    <!-- Steps Section -->
+    <section class="py-32 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-24">
+          <h3
+            class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight"
+          >
+            Langkah Awal<br />Paling Aman Bersama langitlangit.id
+          </h3>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          <!-- Item 1 -->
+          <div
+            class="bg-white p-12 rounded-[3.5rem] shadow-sm hover:shadow-2xl transition-all duration-700 group border border-gray-100 flex flex-col items-center"
+          >
+            <div class="mb-10">
+              <div
+                class="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center group-hover:bg-primary transition-colors duration-500"
+              >
+                <img
+                  src="assets/images/screenshot-2026-02-10.png"
+                  class="w-10 h-10 group-hover:invert transition duration-500"
+                  alt="Info"
+                  onerror="this.src = 'https://via.placeholder.com/80'"
+                />
               </div>
             </div>
-            <h4 class="card-title mbr-fonts-style mb-0 display-7">
-              <strong>INFORMASI PEMBANGUNAN</strong></h4>
-            <h3 class="card-text mbr-fonts-style mt-3 display-7">Ceritakan kebutuhan kamu kepada kami, terkait ruang, behaviour, serta konsep rumah impian kamu</h3>
-            <div class="link-wrap">
-              
-            </div>
+            <h4
+              class="text-[12px] font-black mb-6 text-center uppercase tracking-[0.25em] text-primary"
+            >
+              Informasi
+            </h4>
+            <p
+              class="text-sm md:text-base text-gray-500 text-center leading-relaxed font-medium"
+            >
+              Ceritakan kebutuhan kamu terkait ruang, behaviour, serta konsep
+              rumah impian kamu
+            </p>
           </div>
-        </div>
-      </div>
-      <div class="item features-without-image col-12 col-lg-2">
-        <div class="item-wrapper">
-          <div class="card-box">
-            <div class="img-box">
-              <div class="image-wrapper mb-3">
-                <img src="assets/images/screenshot-2026-02-11.png" alt="Mobirise Website Builder">
+          <!-- Item 2 -->
+          <div
+            class="bg-white p-12 rounded-[3.5rem] shadow-sm hover:shadow-2xl transition-all duration-700 group border border-gray-100 flex flex-col items-center"
+          >
+            <div class="mb-10">
+              <div
+                class="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center group-hover:bg-primary transition-colors duration-500"
+              >
+                <img
+                  src="assets/images/screenshot-2026-02-11.png"
+                  class="w-10 h-10 group-hover:invert transition duration-500"
+                  alt="Survey"
+                  onerror="this.src = 'https://via.placeholder.com/80'"
+                />
               </div>
             </div>
-            <h4 class="card-title mbr-fonts-style mb-0 display-7">
-              <strong>SURVEY</strong></h4>
-            <h3 class="card-text mbr-fonts-style mt-3 display-7">Tim Langitlangit akan mensurvey rumahmu, mengcollect data, hingga menggambar existing rumah kamu</h3>
-            <div class="link-wrap">
-              
-            </div>
+            <h4
+              class="text-[12px] font-black mb-6 text-center uppercase tracking-[0.25em] text-primary"
+            >
+              Survey
+            </h4>
+            <p
+              class="text-sm md:text-base text-gray-500 text-center leading-relaxed font-medium"
+            >
+              Tim kami akan survey, mengumpulkan data, hingga menggambar
+              existing rumah kamu
+            </p>
           </div>
-        </div>
-      </div>
-      <div class="item features-without-image col-12 col-lg-2">
-        <div class="item-wrapper">
-          <div class="card-box">
-            <div class="img-box">
-              <div class="image-wrapper mb-3">
-                <img src="assets/images/screenshot-2026-02-12.png" alt="Mobirise Website Builder">
+          <!-- Item 3 -->
+          <div
+            class="bg-white p-12 rounded-[3.5rem] shadow-sm hover:shadow-2xl transition-all duration-700 group border border-gray-100 flex flex-col items-center"
+          >
+            <div class="mb-10">
+              <div
+                class="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center group-hover:bg-primary transition-colors duration-500"
+              >
+                <img
+                  src="assets/images/screenshot-2026-02-12.png"
+                  class="w-10 h-10 group-hover:invert transition duration-500"
+                  alt="Design"
+                  onerror="this.src = 'https://via.placeholder.com/80'"
+                />
               </div>
             </div>
-            <h4 class="card-title mbr-fonts-style mb-0 display-7">
-              <strong>DESIGN</strong></h4>
-            <h3 class="card-text mbr-fonts-style mt-3 display-7">Tim akan mendesain sesuai dengan konsep dan anggaran yang telah ditetapkan, dengan detail</h3>
-            <div class="link-wrap">
-              
-            </div>
+            <h4
+              class="text-[12px] font-black mb-6 text-center uppercase tracking-[0.25em] text-primary"
+            >
+              Design
+            </h4>
+            <p
+              class="text-sm md:text-base text-gray-500 text-center leading-relaxed font-medium"
+            >
+              Tim mendesain sesuai konsep dan anggaran yang ditetapkan dengan
+              sangat detail
+            </p>
           </div>
-        </div>
-      </div><div class="item features-without-image col-12 col-lg-2">
-        <div class="item-wrapper">
-          <div class="card-box">
-            <div class="img-box">
-              <div class="image-wrapper mb-3">
-                <img src="assets/images/screenshot-2026-02-13.png" alt="Mobirise Website Builder" data-slide-to="3" data-bs-slide-to="4">
+          <!-- Item 4 -->
+          <div
+            class="bg-white p-12 rounded-[3.5rem] shadow-sm hover:shadow-2xl transition-all duration-700 group border border-gray-100 flex flex-col items-center"
+          >
+            <div class="mb-10">
+              <div
+                class="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center group-hover:bg-primary transition-colors duration-500"
+              >
+                <img
+                  src="assets/images/screenshot-2026-02-13.png"
+                  class="w-10 h-10 group-hover:invert transition duration-500"
+                  alt="RAB"
+                  onerror="this.src = 'https://via.placeholder.com/80'"
+                />
               </div>
             </div>
-            <h4 class="card-title mbr-fonts-style mb-0 display-7">
-              <strong>ESTIMASI RAB</strong></h4>
-            <h3 class="card-text mbr-fonts-style mt-3 display-7">Agar desain dapat terealisasi, tim estimator akan menyesuaikan kebutuhan jenis material yang di gunakan&nbsp;</h3>
-            <div class="link-wrap">
-              
-            </div>
+            <h4
+              class="text-[12px] font-black mb-6 text-center uppercase tracking-[0.25em] text-primary"
+            >
+              Estimasi RAB
+            </h4>
+            <p
+              class="text-sm md:text-base text-gray-500 text-center leading-relaxed font-medium"
+            >
+              Menyesuaikan jenis material yang digunakan agar desain dapat
+              terealisasi sempurna
+            </p>
           </div>
-        </div>
-      </div><div class="item features-without-image col-12 col-lg-2">
-        <div class="item-wrapper">
-          <div class="card-box">
-            <div class="img-box">
-              <div class="image-wrapper mb-3">
-                <img src="assets/images/screenshot-2026-02-14.png" alt="Mobirise Website Builder" data-slide-to="4" data-bs-slide-to="5">
+          <!-- Item 5 -->
+          <div
+            class="bg-white p-12 rounded-[3.5rem] shadow-sm hover:shadow-2xl transition-all duration-700 group border border-gray-100 flex flex-col items-center"
+          >
+            <div class="mb-10">
+              <div
+                class="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center group-hover:bg-primary transition-colors duration-500"
+              >
+                <img
+                  src="assets/images/screenshot-2026-02-14.png"
+                  class="w-10 h-10 group-hover:invert transition duration-500"
+                  alt="Pelaksanaan"
+                  onerror="this.src = 'https://via.placeholder.com/80'"
+                />
               </div>
             </div>
-            <h4 class="card-title mbr-fonts-style mb-0 display-7">
-              <strong>PELAKSANAAN</strong></h4>
-            <h3 class="card-text mbr-fonts-style mt-3 display-7">Dengan kontrol yang ketat pada sistem digital. Membuat proyek tepat waktu, tepat mutu, dan tepat biaya tanpa drama</h3>
-            <div class="link-wrap">
-              
+            <h4
+              class="text-[12px] font-black mb-6 text-center uppercase tracking-[0.25em] text-primary"
+            >
+              Pelaksanaan
+            </h4>
+            <p
+              class="text-sm md:text-base text-gray-500 text-center leading-relaxed font-medium"
+            >
+              Kontrol ketat sistem digital menjamin proyek tepat waktu, mutu,
+              dan biaya tanpa drama
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Sections -->
+    <section class="py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Project Design -->
+        <div class="mb-32">
+          <div class="text-center mb-20">
+            <h3 class="text-5xl font-black text-gray-900 mb-6 tracking-tight">
+              Project Design
+            </h3>
+            <p class="text-lg text-gray-400 font-medium italic">
+              Hasil design tim arsitek langitlangit.id
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+              <img
+                src="assets/images/sebuah-vila-modern-yang-facade206-768x1408.png"
+                class="w-full h-full object-cover hover:scale-105 transition duration-700"
+                onerror="
+                  this.src = 'https://via.placeholder.com/600x800?text=Design+1'
+                "
+              />
+            </div>
+            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+              <img
+                src="assets/images/6732f6c5-aaf7-412b-b0bf-e4fa743ef99e-838x1257.png"
+                class="w-full h-full object-cover hover:scale-105 transition duration-700"
+                onerror="
+                  this.src = 'https://via.placeholder.com/600x800?text=Design+2'
+                "
+              />
+            </div>
+            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+              <img
+                src="assets/images/enscape-2025-05-22-14-57-53-images208-838x1048.png"
+                class="w-full h-full object-cover hover:scale-105 transition duration-700"
+                onerror="
+                  this.src = 'https://via.placeholder.com/600x800?text=Design+3'
+                "
+              />
+            </div>
+            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+              <img
+                src="assets/images/d8c78590-9ec2-492d-8167-e1a5d80b7a01-838x1257.png"
+                class="w-full h-full object-cover hover:scale-105 transition duration-700"
+                onerror="
+                  this.src = 'https://via.placeholder.com/600x800?text=Design+4'
+                "
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Civil -->
+        <div class="mb-32">
+          <div class="text-center mb-20">
+            <h3 class="text-5xl font-black text-gray-900 mb-6 tracking-tight">
+              Project Civil
+            </h3>
+            <p class="text-lg text-gray-400 font-medium italic">
+              Hasil project pembangunan langitlangit.id
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+            <div class="aspect-square rounded-[3rem] overflow-hidden shadow-xl">
+              <img
+                src="assets/images/whatsapp20image202025-09-0820at2014.54.56202-838x838.jpg"
+                class="w-full h-full object-cover"
+                onerror="
+                  this.src = 'https://via.placeholder.com/600x600?text=Civil+1'
+                "
+              />
+            </div>
+            <div class="aspect-square rounded-[3rem] overflow-hidden shadow-xl">
+              <img
+                src="assets/images/whatsapp20image202025-09-0820at2013.30.34201-838x838.jpg"
+                class="w-full h-full object-cover"
+                onerror="
+                  this.src = 'https://via.placeholder.com/600x600?text=Civil+2'
+                "
+              />
+            </div>
+            <div class="aspect-square rounded-[3rem] overflow-hidden shadow-xl">
+              <img
+                src="assets/images/3-768x1408.png"
+                class="w-full h-full object-cover"
+                onerror="
+                  this.src = 'https://via.placeholder.com/600x600?text=Civil+3'
+                "
+              />
+            </div>
+            <div class="aspect-square rounded-[3rem] overflow-hidden shadow-xl">
+              <img
+                src="assets/images/2.png"
+                class="w-full h-full object-cover"
+                onerror="
+                  this.src = 'https://via.placeholder.com/600x600?text=Civil+4'
+                "
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Interior -->
+        <div>
+          <div class="text-center mb-20">
+            <h3 class="text-5xl font-black text-gray-900 mb-6 tracking-tight">
+              Project Interior
+            </h3>
+            <p class="text-lg text-gray-400 font-medium italic">
+              Hasil project interior langitlangit.id
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+              <img
+                src="assets/images/img-6882202-838x1536.jpg"
+                class="w-full h-full object-cover"
+                onerror="
+                  this.src =
+                    'https://via.placeholder.com/600x800?text=Interior+1'
+                "
+              />
+            </div>
+            <div class="aspect-square rounded-[3rem] overflow-hidden shadow-xl">
+              <img
+                src="assets/images/whatsapp20image202025-09-0820at2013.30.37-838x838.jpg"
+                class="w-full h-full object-cover"
+                onerror="
+                  this.src =
+                    'https://via.placeholder.com/600x600?text=Interior+2'
+                "
+              />
+            </div>
+            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+              <img
+                src="assets/images/img-6891202-838x1536.jpg"
+                class="w-full h-full object-cover"
+                onerror="
+                  this.src =
+                    'https://via.placeholder.com/600x800?text=Interior+3'
+                "
+              />
+            </div>
+            <div class="aspect-[3/4] rounded-[3rem] overflow-hidden shadow-xl">
+              <img
+                src="assets/images/494dfe81-e949-400c-8a65-62e84c8993ca-838x1257.png"
+                class="w-full h-full object-cover"
+                onerror="
+                  this.src =
+                    'https://via.placeholder.com/600x800?text=Interior+4'
+                "
+              />
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section data-bs-version="5.1" class="gallery3 cid-vaNJMFRaT9" id="gallery03-h">
-    
-    
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-12 content-head">
-          <div class="mbr-section-head mb-5">
-            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-1">
-              <strong>Project Design</strong></h4>
-            <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-              Hasil design tim arsitek langitlangit.id</h5>
+    <!-- Team Section -->
+    <section class="py-32 bg-gray-950 text-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <h3
+          class="text-4xl md:text-6xl font-black text-center mb-28 tracking-tight"
+        >
+          Meet the creators
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-24">
+          <div class="text-center group">
+            <div
+              class="relative overflow-hidden rounded-[3rem] w-full aspect-square mb-10 bg-gray-900 shadow-2xl"
+            >
+              <img
+                src="assets/images/mg-1264.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
+            </div>
+            <h5 class="text-xl font-bold">Heni RL</h5>
+            <p
+              class="text-primary text-[12px] uppercase tracking-widest font-black mt-3"
+            >
+              Founder
+            </p>
+          </div>
+          <div class="text-center group">
+            <div
+              class="relative overflow-hidden rounded-[3rem] w-full aspect-square mb-10 bg-gray-900 shadow-2xl"
+            >
+              <img
+                src="assets/images/mg-1238.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
+            </div>
+            <h5 class="text-xl font-bold">Yulia W</h5>
+            <p
+              class="text-primary text-[12px] uppercase tracking-widest font-black mt-3"
+            >
+              Finance
+            </p>
+          </div>
+          <div class="text-center group">
+            <div
+              class="relative overflow-hidden rounded-[3rem] w-full aspect-square mb-10 bg-gray-900 shadow-2xl"
+            >
+              <img
+                src="assets/images/screenshot-2026-02-15.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
+            </div>
+            <h5 class="text-xl font-bold">Ihsanuz Z</h5>
+            <p
+              class="text-primary text-[12px] uppercase tracking-widest font-black mt-3"
+            >
+              Supervisor
+            </p>
+          </div>
+          <div class="text-center group">
+            <div
+              class="relative overflow-hidden rounded-[3rem] w-full aspect-square mb-10 bg-gray-900 shadow-2xl"
+            >
+              <img
+                src="assets/images/screenshot-2026-2.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
+            </div>
+            <h5 class="text-xl font-bold">Lude LP</h5>
+            <p
+              class="text-primary text-[12px] uppercase tracking-widest font-black mt-3"
+            >
+              Marketing
+            </p>
+          </div>
+          <div class="text-center group">
+            <div
+              class="relative overflow-hidden rounded-[3rem] w-full aspect-square mb-10 bg-gray-900 shadow-2xl"
+            >
+              <img
+                src="assets/images/screenshot-2026-3.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
+            </div>
+            <h5 class="text-xl font-bold">Dita A</h5>
+            <p
+              class="text-primary text-[12px] uppercase tracking-widest font-black mt-3"
+            >
+              Procurement
+            </p>
+          </div>
+          <div class="text-center group">
+            <div
+              class="relative overflow-hidden rounded-[3rem] w-full aspect-square mb-10 bg-gray-900 shadow-2xl"
+            >
+              <img
+                src="assets/images/screenshot-2026-4.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
+            </div>
+            <h5 class="text-xl font-bold">S. Indra</h5>
+            <p
+              class="text-primary text-[12px] uppercase tracking-widest font-black mt-3"
+            >
+              Estimating
+            </p>
+          </div>
+          <div class="text-center group">
+            <div
+              class="relative overflow-hidden rounded-[3rem] w-full aspect-square mb-10 bg-gray-900 shadow-2xl"
+            >
+              <img
+                src="assets/images/mg-1313.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
+            </div>
+            <h5 class="text-xl font-bold">Adli FM</h5>
+            <p
+              class="text-primary text-[12px] uppercase tracking-widest font-black mt-3"
+            >
+              Site Spv
+            </p>
+          </div>
+          <div class="text-center group">
+            <div
+              class="relative overflow-hidden rounded-[3rem] w-full aspect-square mb-10 bg-gray-900 shadow-2xl"
+            >
+              <img
+                src="assets/images/screenshot-2026-5.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
+            </div>
+            <h5 class="text-xl font-bold">M. Rafly</h5>
+            <p
+              class="text-primary text-[12px] uppercase tracking-widest font-black mt-3"
+            >
+              Developer
+            </p>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="item features-image col-12 col-md-6 col-lg-3">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <img src="assets/images/sebuah-vila-modern-yang-facade206-768x1408.png" alt="Mobirise Website Builder" title="" data-slide-to="0" data-bs-slide-to="0">
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-wrap items-end justify-between mb-24 gap-8">
+          <div class="max-w-2xl">
+            <span
+              class="inline-block px-5 py-2 rounded-full bg-blue-50 text-[11px] font-black tracking-[0.25em] text-primary uppercase mb-8"
+              >Testimonials</span
+            >
+            <h3
+              class="text-4xl md:text-7xl font-black text-gray-900 tracking-tight leading-tight"
+            >
+              Telah dipercaya oleh lebih dari 1k+ Clients
+            </h3>
+          </div>
+          <div class="max-w-md">
+            <p class="text-lg text-gray-500 font-medium mb-12 leading-relaxed">
+              Langitlangit.id telah membantu ratusan keluarga mewujudkan rumah
+              impian dengan transparansi penuh dan kualitas terjamin.
+            </p>
+            <div class="inline-flex p-1.5 bg-gray-100 rounded-2xl">
+              <button
+                class="testi-tab px-10 py-3 rounded-xl bg-white shadow-sm text-sm font-bold transition"
+                data-tab="image"
+              >
+                Image
+              </button>
+              <button
+                class="testi-tab px-10 py-3 rounded-xl text-sm font-bold text-gray-400 hover:text-gray-600 transition"
+                data-tab="video"
+              >
+                Video
+              </button>
             </div>
-            
           </div>
         </div>
-        
-        <div class="item features-image col-12 col-md-6 col-lg-3">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <img src="assets/images/6732f6c5-aaf7-412b-b0bf-e4fa743ef99e-838x1257.png" alt="Mobirise Website Builder" title="" data-slide-to="1" data-bs-slide-to="1">
+
+        <!-- Image Slider -->
+        <div id="testi-image-panel" class="relative group">
+          <div class="testi-slider-image">
+            <div class="px-4">
+              <div
+                class="bg-gray-50 rounded-[4rem] overflow-hidden border border-gray-100 shadow-sm"
+              >
+                <img
+                  src="assets/images/testis/K1.jpeg"
+                  class="w-full h-auto object-contain"
+                  onerror="
+                    this.src = 'https://via.placeholder.com/400x500?text=Chat+1'
+                  "
+                />
+              </div>
             </div>
-            
+            <div class="px-4">
+              <div
+                class="bg-gray-50 rounded-[4rem] overflow-hidden border border-gray-100 shadow-sm"
+              >
+                <img
+                  src="assets/images/testis/K2.jpeg"
+                  class="w-full h-auto object-contain"
+                  onerror="
+                    this.src = 'https://via.placeholder.com/400x500?text=Chat+2'
+                  "
+                />
+              </div>
+            </div>
+            <div class="px-4">
+              <div
+                class="bg-gray-50 rounded-[4rem] overflow-hidden border border-gray-100 shadow-sm"
+              >
+                <img
+                  src="assets/images/testis/K3.jpeg"
+                  class="w-full h-auto object-contain"
+                  onerror="
+                    this.src = 'https://via.placeholder.com/400x500?text=Chat+3'
+                  "
+                />
+              </div>
+            </div>
+            <div class="px-4">
+              <div
+                class="bg-gray-50 rounded-[4rem] overflow-hidden border border-gray-100 shadow-sm"
+              >
+                <img
+                  src="assets/images/testis/K4.jpeg"
+                  class="w-full h-auto object-contain"
+                  onerror="
+                    this.src = 'https://via.placeholder.com/400x500?text=Chat+4'
+                  "
+                />
+              </div>
+            </div>
           </div>
-        </div><div class="item features-image col-12 col-md-6 col-lg-3">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <img src="assets/images/enscape-2025-05-22-14-57-53-images208-838x1048.png" alt="Mobirise Website Builder" title="" data-slide-to="2" data-bs-slide-to="2">
-            </div>
-            
-          </div>
-        </div><div class="item features-image col-12 col-md-6 col-lg-3">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <img src="assets/images/d8c78590-9ec2-492d-8167-e1a5d80b7a01-838x1257.png" alt="Mobirise Website Builder" title="" data-slide-to="3" data-bs-slide-to="3">
-            </div>
-            
+          <div class="flex justify-center mt-20 gap-8">
+            <button
+              id="testi-prev"
+              class="w-16 h-16 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition shadow-sm text-xl"
+            >
+              ←
+            </button>
+            <button
+              id="testi-next"
+              class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center hover:bg-blue-700 transition shadow-xl shadow-blue-100 text-xl"
+            >
+              →
+            </button>
           </div>
         </div>
-        
+
+        <!-- Video Slider -->
+        <div id="testi-video-panel" class="hidden relative group">
+          <div class="testi-slider-video">
+            <div class="px-4">
+              <div
+                class="aspect-[9/16] bg-black rounded-[4rem] overflow-hidden shadow-2xl"
+              >
+                <video
+                  class="w-full h-full object-cover"
+                  src="assets/videos/tests1.mp4"
+                  muted
+                  loop
+                  playsinline
+                  controls
+                ></video>
+              </div>
+            </div>
+            <div class="px-4">
+              <div
+                class="aspect-[9/16] bg-black rounded-[4rem] overflow-hidden shadow-2xl"
+              >
+                <video
+                  class="w-full h-full object-cover"
+                  src="assets/videos/tests1.1.mp4"
+                  muted
+                  loop
+                  playsinline
+                  controls
+                ></video>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center mt-20 gap-8">
+            <button
+              id="testi-video-prev"
+              class="w-16 h-16 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition shadow-sm text-xl"
+            >
+              ←
+            </button>
+            <button
+              id="testi-video-next"
+              class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center hover:bg-blue-700 transition shadow-xl shadow-blue-100 text-xl"
+            >
+              →
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-<section data-bs-version="5.1" class="gallery3 cid-vaNS5Zrd9F" id="gallery03-i">
-    
-    
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-12 content-head">
-          <div class="mbr-section-head mb-5">
-            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-1">
-              <strong>Project Civil</strong></h4>
-            <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-              Hasil project pembangunan langitlangit.id</h5>
+    <!-- Contact Section -->
+    <section class="py-32 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="bg-white rounded-[5rem] shadow-2xl overflow-hidden flex flex-wrap border border-gray-100"
+        >
+          <div class="w-full lg:w-1/2 p-16 md:p-32">
+            <h3 class="text-5xl font-black mb-14 text-gray-900 tracking-tight">
+              Contact us
+            </h3>
+            <form class="space-y-8">
+              <input
+                type="text"
+                placeholder="Name"
+                class="w-full px-10 py-6 rounded-3xl bg-gray-50 border-none focus:ring-2 focus:ring-primary transition font-semibold text-lg"
+              />
+              <input
+                type="email"
+                placeholder="E-mail"
+                class="w-full px-10 py-6 rounded-3xl bg-gray-50 border-none focus:ring-2 focus:ring-primary transition font-semibold text-lg"
+              />
+              <input
+                type="tel"
+                placeholder="Phone"
+                class="w-full px-10 py-6 rounded-3xl bg-gray-50 border-none focus:ring-2 focus:ring-primary transition font-semibold text-lg"
+              />
+              <button
+                type="submit"
+                class="w-full bg-primary text-white py-7 rounded-3xl font-black uppercase tracking-[0.25em] hover:bg-blue-700 transition shadow-xl shadow-blue-100 text-lg"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+          <div class="w-full lg:w-1/2 min-h-[600px]">
+            <img
+              class="w-full h-full object-cover"
+              src="assets/images/1-1.png"
+              alt="Contact"
+              onerror="
+                this.src =
+                  'https://via.placeholder.com/900x900?text=Contact+Image'
+              "
+            />
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="item features-image col-12 col-md-6 col-lg-3">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <img src="assets/images/whatsapp20image202025-09-0820at2014.54.56202-838x838.jpg" alt="Mobirise Website Builder" title="" data-slide-to="0" data-bs-slide-to="0">
-            </div>
-            
-          </div>
-        </div>
-        <div class="item features-image col-12 col-md-6 col-lg-3">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <img src="assets/images/whatsapp20image202025-09-0820at2013.30.34201-838x838.jpg" alt="Mobirise Website Builder" title="" data-slide-to="1" data-bs-slide-to="1">
-            </div>
-            
-          </div>
-        </div>
-        <div class="item features-image col-12 col-md-6 col-lg-3">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <img src="assets/images/3-768x1408.png" alt="Mobirise Website Builder" title="" data-slide-to="2" data-bs-slide-to="2">
-            </div>
-            
-          </div>
-        </div><div class="item features-image col-12 col-md-6 col-lg-3">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <img src="assets/images/2.png" alt="Mobirise Website Builder" title="" data-slide-to="3" data-bs-slide-to="3">
-            </div>
-            
-          </div>
-        </div>
-        
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-white">
+      <div
+        class="max-w-7xl mx-auto px-6 text-center border-t border-gray-100 pt-24"
+      >
+        <img
+          class="h-8 w-auto mx-auto mb-14 opacity-30 grayscale"
+          src="assets/images/2-2.png"
+          alt="Footer Logo"
+          onerror="this.style.display = 'none'"
+        />
+        <p
+          class="text-gray-400 text-[12px] font-bold tracking-[0.4em] uppercase"
+        >
+          © Copyright 2025 Langitlangit.id - All Rights Reserved
+        </p>
       </div>
-    </div>
-  </section>
+    </footer>
 
-<section data-bs-version="5.1" class="gallery3 cid-vaNSfKYJ65" id="gallery03-j">
-    
-    
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-12 content-head">
-          <div class="mbr-section-head mb-5">
-            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-1">
-              <strong>Project Interior</strong></h4>
-            <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-              Hasil project interior langitlangit.id</h5>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="item features-image col-12 col-md-6 col-lg-3">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <img src="assets/images/img-6882202-838x1536.jpg" alt="Mobirise Website Builder" title="" data-slide-to="0" data-bs-slide-to="0">
-            </div>
-            
-          </div>
-        </div>
-        <div class="item features-image col-12 col-md-6 col-lg-3">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <img src="assets/images/whatsapp20image202025-09-0820at2013.30.37-838x838.jpg" alt="Mobirise Website Builder" title="" data-slide-to="1" data-bs-slide-to="1">
-            </div>
-            
-          </div>
-        </div>
-        <div class="item features-image col-12 col-md-6 col-lg-3">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <img src="assets/images/img-6891202-838x1536.jpg" alt="Mobirise Website Builder" title="" data-slide-to="2" data-bs-slide-to="2">
-            </div>
-            
-          </div>
-        </div><div class="item features-image col-12 col-md-6 col-lg-3">
-          <div class="item-wrapper">
-            <div class="item-img">
-              <img src="assets/images/494dfe81-e949-400c-8a65-62e84c8993ca-838x1257.png" alt="Mobirise Website Builder" title="" data-slide-to="3" data-bs-slide-to="3">
-            </div>
-            
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Image Slider Init
+        var imageSlider = tns({
+          container: ".testi-slider-image",
+          items: 1,
+          slideBy: 1,
+          gutter: 40,
+          autoplay: true,
+          autoplayTimeout: 5000,
+          autoplayButtonOutput: false,
+          controls: false,
+          nav: false,
+          mouseDrag: true,
+          responsive: {
+            640: { items: 2 },
+            1024: { items: 3 },
+          },
+        });
 
-<section data-bs-version="5.1" class="people03 cid-vaNT2gYmRU" id="people03-k">
-	
-	
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 content-head">
-				<div class="mbr-section-head mb-5">
-					<h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-						<strong>Meet the creators</strong>
-					</h4>
-					
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="item features-image col-12 col-md-6 col-lg-3 active">
-				<div class="item-wrapper">
-					<div class="item-img mb-3">
-						<img src="assets/images/mg-1264.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="0" data-bs-slide-to="0">
-					</div>
-					<div class="item-content align-left">
-						<h5 class="item-title mbr-fonts-style display-5"><strong>Heni RL</strong></h5>
-						<h6 class="item-subtitle mbr-fonts-style mb-3 display-7">Founder</h6>
-						
-					</div>
-					
-				</div>
-			</div>
-			<div class="item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper">
-					<div class="item-img mb-3">
-						<img src="assets/images/mg-1238.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="1" data-bs-slide-to="1">
-					</div>
-					<div class="item-content align-left">
-						<h5 class="item-title mbr-fonts-style display-5"><strong>Yulia W</strong></h5>
-						<h6 class="item-subtitle mbr-fonts-style mb-3 display-7">Head of Finance</h6>
-						
-					</div>
-					
-				</div>
-			</div>
-			<div class="item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper">
-					<div class="item-img mb-3">
-						<img src="assets/images/screenshot-2026-02-15.png" alt="Mobirise Website Builder" title="" data-slide-to="2" data-bs-slide-to="2">
-					</div>
-					<div class="item-content align-left">
-						<h5 class="item-title mbr-fonts-style display-5"><strong>Ihsanuz Z</strong></h5>
-						<h6 class="item-subtitle mbr-fonts-style mb-3 display-7">Design Supervisor</h6>
-						
-					</div>
-					
-				</div>
-			</div><div class="item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper">
-					<div class="item-img mb-3">
-						<img src="assets/images/screenshot-2026-2.png" alt="Mobirise Website Builder" title="" data-slide-to="3" data-bs-slide-to="3">
-					</div>
-					<div class="item-content align-left">
-						<h5 class="item-title mbr-fonts-style display-5"><strong>Lude LP</strong></h5>
-						<h6 class="item-subtitle mbr-fonts-style mb-3 display-7">Marketing Executive</h6>
-						
-					</div>
-					
-				</div>
-			</div><div class="item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper">
-					<div class="item-img mb-3">
-						<img src="assets/images/screenshot-2026-3.png" alt="Mobirise Website Builder" title="" data-slide-to="4" data-bs-slide-to="4">
-					</div>
-					<div class="item-content align-left">
-						<h5 class="item-title mbr-fonts-style display-5"><strong>Dita A</strong></h5>
-						<h6 class="item-subtitle mbr-fonts-style mb-3 display-7">Procurement</h6>
-						
-					</div>
-					
-				</div>
-			</div><div class="item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper">
-					<div class="item-img mb-3">
-						<img src="assets/images/screenshot-2026-4.png" alt="Mobirise Website Builder" title="" data-slide-to="5" data-bs-slide-to="5">
-					</div>
-					<div class="item-content align-left">
-						<h5 class="item-title mbr-fonts-style display-5"><strong>S. Indra</strong></h5>
-						<h6 class="item-subtitle mbr-fonts-style mb-3 display-7">Estimating</h6>
-						
-					</div>
-					
-				</div>
-			</div><div class="item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper">
-					<div class="item-img mb-3">
-						<img src="assets/images/mg-1313.jpeg" alt="Mobirise Website Builder" title="" data-slide-to="6" data-bs-slide-to="6">
-					</div>
-					<div class="item-content align-left">
-						<h5 class="item-title mbr-fonts-style display-5"><strong>Adli FM</strong></h5>
-						<h6 class="item-subtitle mbr-fonts-style mb-3 display-7">Site Supervisor</h6>
-						
-					</div>
-					
-				</div>
-			</div><div class="item features-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper">
-					<div class="item-img mb-3">
-						<img src="assets/images/screenshot-2026-5.png" alt="Mobirise Website Builder" title="" data-slide-to="7" data-bs-slide-to="7">
-					</div>
-					<div class="item-content align-left">
-						<h5 class="item-title mbr-fonts-style display-5"><strong>M. Rafly</strong></h5>
-						<h6 class="item-subtitle mbr-fonts-style mb-3 display-7">Fullstack Development</h6>
-						
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+        document.getElementById("testi-prev").onclick = () =>
+          imageSlider.goTo("prev");
+        document.getElementById("testi-next").onclick = () =>
+          imageSlider.goTo("next");
 
-<section data-bs-version="5.1" class="people04 cid-vaOAgHMM7w" id="people04-m">
-	
-	
-	<div class="container">
-		<div class="row mb-5 justify-content-center">
-			<div class="col-12 mb-0 content-head">
-				<h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-					<strong>Apa kata mereka ?</strong></h3>
-				
-			</div>
-		</div>
-		<div class="row mbr-masonry" data-masonry="{&quot;percentPosition&quot;: true }">
-			<div class="item features-without-image col-12 col-md-6 col-lg-3 active">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						<p class="card-text mbr-fonts-style display-7">
-							Di awal desain sempat ada perbedaan persepsi soal model plafon dan pencahayaan, jadi perlu revisi beberapa kali. Tapi tim Langit-Langit ID sabar, mau dengar masukan, dan cepat melakukan penyesuaian sampai sesuai dengan yang saya mau. Setelah eksekusi hasilnya rapi dan sesuai desain final. Overall puas dengan pelayanannya.
-						</p>
-						
-						<h5 class="card-title mbr-fonts-style display-7">
-							<strong>Wiji</strong></h5>
-					</div>
-				</div>
-			</div>
-			<div class="item features-without-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						<p class="card-text mbr-fonts-style display-7">
-							Awalnya Temen nyaranin kesini, pas liat contoh interior kitchen yg bagus dan dinamis serta pelayanan konsultasi mengenai desain yg kita mau jg begitu baik, jadi percaya untuk pesan kitchen Set disini. Rekomendasi banget pokokny
-						</p>
-						
-						<h5 class="card-title mbr-fonts-style display-7">
-							<strong>Risky D</strong></h5>
-					</div>
-				</div>
-			</div>
-			<div class="item features-without-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						<p class="card-text mbr-fonts-style display-7">
-							Terimakasih langitlangit.id .rumah aku jadi lebih estetik dan bagus banget. Jadi aku terkesan dengan tim LangitLangit . Mereka menunjukkan profesionalisme yang luar biasa dalam setiap aspek pekerjaan mereka..
-						</p>
-						
-						<h5 class="card-title mbr-fonts-style display-7">
-							<strong>Kurniawan</strong></h5>
-					</div>
-				</div>
-			</div>
-			
-			
-			<div class="item features-without-image col-12 col-md-6 col-lg-3">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						<p class="card-text mbr-fonts-style display-7">Saya sangat terkesan dengan tim LangitLangit! Mereka menunjukkan profesionalisme yang luar biasa dalam setiap aspek pekerjaan mereka. Komunikasi yang cepat dan jelas, perhatian terhadap detail, dan dedikasi untuk memenuhi kebutuhan klien benar-benar menonjol. Proyek kami selesai tepat waktu dengan kualitas yang melebihi harapan saya.</p>
-						
-						<h5 class="card-title mbr-fonts-style display-7">
-							<strong>Putri</strong></h5>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+        // Tabs Logic
+        var activeTab = "image";
+        var tabs = document.querySelectorAll(".testi-tab");
+        var videoSlider = null;
 
-<section data-bs-version="5.1" class="form03 cid-vaOCOsgTpb" id="form03-n">
-    
+        tabs.forEach((tab) => {
+          tab.onclick = function () {
+            var target = tab.getAttribute("data-tab");
+            if (target === activeTab) return;
 
-    
+            activeTab = target;
+            tabs.forEach((t) => {
+              t.classList.toggle("bg-white", t === tab);
+              t.classList.toggle("shadow-sm", t === tab);
+              t.classList.toggle("text-gray-400", t !== tab);
+            });
 
-    <div class="container">
-        <div class="row justify-content-center align-items-center main-row">
-            <div class="col-12 col-lg item-wrapper">
-                <div class="mbr-section-head mb-5">
-                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                        <strong>Contact us</strong>
-                    </h3>
-                    
-                </div>
-                <div class="col-lg-12 mx-auto mbr-form" data-form-type="formoid">
-                    <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="7FE3tzzuJRcJJP55xG9KFL2KNBFH9CRLisL5VpgPSpvzoRm3eey55YfSThkf68+qRYhn3BfUEWIi/hJXGqicNBdlYcKpjOmxheEGike77/kbZE1MSJYYXG0ClOON6SAh">
-                        <div class="row">
-                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
-                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                                Oops...! some problem!
-                            </div>
-                        </div>
-                        <div class="dragArea row">
-                            <div class="col-md col-sm-12 form-group mb-3 mb-3" data-for="name">
-                                <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form03-n">
-                            </div>
-                            <div class="col-md col-sm-12 form-group mb-3 mb-3" data-for="email">
-                                <input type="email" name="email" placeholder="E-mail" data-form-field="email" class="form-control" value="" id="email-form03-n">
-                            </div>
-                            <div class="col-12 form-group mb-3 mb-3" data-for="phone">
-                                <input type="tel" name="phone" placeholder="Phone" data-form-field="phone" class="form-control" value="" id="phone-form03-n">
-                            </div>
-                            
-                            <div class="col-auto align-center mbr-section-btn">
-                              <button type="submit" class="w-100 btn btn-primary display-7">Send message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            document
+              .getElementById("testi-image-panel")
+              .classList.toggle("hidden", target !== "image");
+            document
+              .getElementById("testi-video-panel")
+              .classList.toggle("hidden", target !== "video");
 
-
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="image-wrapper">
-                    <img class="w-100" src="assets/images/1-1.png" alt="Mobirise Website Builder">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="footer4 cid-vaODf27FHm" once="footers" id="footer04-o">
-
-    
-
-    
-
-    <div class="container">
-        <div class="media-container-row align-center mbr-white">
-            <div class="col-12">
-                <p class="mbr-text mb-0 mbr-fonts-style display-7">
-                    © Copyright 2025 Mobirise - All Rights Reserved
-                </p>
-            </div>
-        </div>
-    </div>
-</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/26662" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://mobirise.com/builder/ai-website-generator.html">AI Website Generator</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/masonry/masonry.pkgd.min.js"></script>  <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>  <script src="assets/theme/js/script.js"></script>  <script src="assets/formoid/formoid.min.js"></script>  
-  
-  
-</body>
+            if (target === "video" && !videoSlider) {
+              videoSlider = tns({
+                container: ".testi-slider-video",
+                items: 1,
+                slideBy: 1,
+                gutter: 40,
+                controls: false,
+                nav: false,
+                mouseDrag: true,
+                responsive: {
+                  640: { items: 2 },
+                  1024: { items: 3 },
+                },
+              });
+              document.getElementById("testi-video-prev").onclick = () =>
+                videoSlider.goTo("prev");
+              document.getElementById("testi-video-next").onclick = () =>
+                videoSlider.goTo("next");
+            }
+          };
+        });
+      });
+    </script>
+  </body>
 </html>
