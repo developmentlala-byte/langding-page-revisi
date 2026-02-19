@@ -9,7 +9,9 @@
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
         n = f.fbq = function () {
-          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
         };
         if (!f._fbq) f._fbq = n;
         n.push = n;
@@ -21,17 +23,31 @@
         t.src = v;
         s = b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t, s);
-      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
       fbq("init", "1369029608310562");
       fbq("track", "PageView");
     </script>
-    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=1369029608310562&ev=PageView&noscript=1" /></noscript>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1369029608310562&ev=PageView&noscript=1"
+    /></noscript>
     <!-- End Meta Pixel Code -->
 
     <!-- Google Fonts: Inter Tight Standar (Memuat semua ketebalan) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -48,7 +64,10 @@
         },
       };
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
     <style>
       /* PAKSA SEMUA ELEMEN TANPA TERKECUALI MENGGUNAKAN INTER TIGHT */
       * {
@@ -113,7 +132,11 @@
 
       /* Step Overlay & Luxury Box */
       .step-overlay {
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
       }
 
       .luxury-glass-box {
@@ -136,70 +159,139 @@
         gap: 4px;
       }
       /* Teknik Grid untuk animasi height 0 ke auto */
-    .expand-content {
-      display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
-      opacity: 0;
-    }
-    
-    .group:hover .expand-content {
-      grid-template-rows: 1fr;
-      opacity: 1;
-    }
+      .expand-content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition:
+          grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.4s;
+        opacity: 0;
+      }
 
-    /* Overlay gradasi agar teks terbaca jelas di atas foto */
-    .glass-gradient {
-      background: linear-gradient(to top, 
-        rgba(0,0,0,0.9) 0%, 
-        rgba(0,0,0,0.4) 50%, 
-        transparent 100%);
-    }
+      .group:hover .expand-content {
+        grid-template-rows: 1fr;
+        opacity: 1;
+      }
+
+      /* Overlay gradasi agar teks terbaca jelas di atas foto */
+      .glass-gradient {
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9) 0%,
+          rgba(0, 0, 0, 0.4) 50%,
+          transparent 100%
+        );
+      }
     </style>
   </head>
   <body class="text-gray-900 overflow-x-hidden">
     <!-- Mobile Menu Overlay Background -->
-    <div id="menu-overlay" class="fixed inset-0 bg-black/40 z-[9998] opacity-0"></div>
+    <div
+      id="menu-overlay"
+      class="fixed inset-0 bg-black/40 z-[9998] opacity-0"
+    ></div>
 
     <!-- Mobile Menu Drawer -->
-    <div id="mobile-menu" class="fixed right-0 top-0 h-full w-[80%] max-w-[320px] z-[9999] bg-white shadow-[-20px_0_60px_rgba(0,0,0,0.1)] flex flex-col p-10 md:hidden border-l border-gray-100">
+    <div
+      id="mobile-menu"
+      class="fixed right-0 top-0 h-full w-[80%] max-w-[320px] z-[9999] bg-white shadow-[-20px_0_60px_rgba(0,0,0,0.1)] flex flex-col p-10 md:hidden border-l border-gray-100"
+    >
       <div class="flex justify-end mb-16">
-        <button id="menu-close" class="p-2 text-gray-400 hover:text-primary transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+        <button
+          id="menu-close"
+          class="p-2 text-gray-400 hover:text-primary transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-9 w-9"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
       </div>
       <div class="flex flex-col gap-10">
-        <a href="#about" class="text-3xl font-black uppercase tracking-normal text-gray-900 hover:text-primary transition-colors">About</a>
-        <a href="#service" class="text-3xl font-black uppercase tracking-normal text-gray-900 hover:text-primary transition-colors">Services</a>
-        <a href="#" class="text-3xl font-black uppercase tracking-normal text-gray-900 hover:text-primary transition-colors">Contacts</a>
+        <a
+          href="#about"
+          class="text-3xl font-black uppercase tracking-normal text-gray-900 hover:text-primary transition-colors"
+          >About</a
+        >
+        <a
+          href="#service"
+          class="text-3xl font-black uppercase tracking-normal text-gray-900 hover:text-primary transition-colors"
+          >Services</a
+        >
+        <a
+          href="#"
+          class="text-3xl font-black uppercase tracking-normal text-gray-900 hover:text-primary transition-colors"
+          >Contacts</a
+        >
       </div>
       <div class="mt-auto pt-10 border-t border-gray-50 flex flex-col gap-4">
-        <img class="h-5 w-auto self-start opacity-30 grayscale" src="assets/images/2-2.png" alt="Logo" />
-        <span class="text-gray-300 font-bold uppercase tracking-[0.3em] text-[10px]">Langitlangit.id © 2026</span>
+        <img
+          class="h-5 w-auto self-start opacity-30 grayscale"
+          src="assets/images/2-2.png"
+          alt="Logo"
+        />
+        <span
+          class="text-gray-300 font-bold uppercase tracking-[0.3em] text-[10px]"
+          >Langitlangit.id © 2026</span
+        >
       </div>
     </div>
 
     <!-- Floating Action Buttons -->
-    <div class="fixed bottom-6 right-6 z-[9990] flex flex-col items-end space-y-4">
-      <div id="wa-notif" class="bg-white border border-gray-100 px-5 py-3 rounded-2xl shadow-2xl mb-2 relative animate-bounce hidden md:block opacity-0 translate-y-4">
+    <div
+      class="fixed bottom-6 right-6 z-[9990] flex flex-col items-end space-y-4"
+    >
+      <div
+        id="wa-notif"
+        class="bg-white border border-gray-100 px-5 py-3 rounded-2xl shadow-2xl mb-2 relative animate-bounce hidden md:block opacity-0 translate-y-4"
+      >
         <p class="text-[13px] font-bold text-gray-800 flex items-center gap-2">
           <span class="relative flex h-2.5 w-2.5">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
+            ></span>
+            <span
+              class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"
+            ></span>
           </span>
           Hai! lala disini Konsultasi gratis disini ya..
         </p>
-        <div class="absolute -bottom-2 right-8 w-4 h-4 bg-white border-r border-b border-gray-100 rotate-45"></div>
+        <div
+          class="absolute -bottom-2 right-8 w-4 h-4 bg-white border-r border-b border-gray-100 rotate-45"
+        ></div>
       </div>
 
-      <a href="https://wa.me/6281222250143" target="_blank" class="flex items-center gap-4 bg-[#25D366] text-white px-6 py-4 rounded-2xl shadow-2xl hover:-translate-y-2 transition-all duration-300">
+      <a
+        href="https://wa.me/6281222250143"
+        target="_blank"
+        class="flex items-center gap-4 bg-[#25D366] text-white px-6 py-4 rounded-2xl shadow-2xl hover:-translate-y-2 transition-all duration-300"
+      >
         <div class="flex flex-col items-end hidden md:flex">
-          <span class="text-[10px] font-black uppercase tracking-widest opacity-80">Online Sekarang</span>
-          <span class="text-sm font-bold tracking-tight">Tanya via WhatsApp</span>
+          <span
+            class="text-[10px] font-black uppercase tracking-widest opacity-80"
+            >Online Sekarang</span
+          >
+          <span class="text-sm font-bold tracking-tight"
+            >Tanya via WhatsApp</span
+          >
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="white"
+          viewBox="0 0 24 24"
+        >
           <path
             d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181 0 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.499-5.688-1.447l-6.305 1.65zm6.59-4.814c1.547.92 3.395 1.403 5.26 1.405l.003.001c5.429 0 9.847-4.42 9.849-9.849.002-2.631-1.02-5.105-2.877-6.963-1.859-1.859-4.332-2.88-6.961-2.881-5.432 0-9.851 4.42-9.854 9.849-.001 1.883.535 3.719 1.552 5.309l-.997 3.639 3.725-.976zm10.222-7.07c-.282-.142-1.666-.823-1.923-.917-.258-.095-.446-.142-.634.142-.188.283-.728.917-.892 1.107-.164.19-.328.213-.61.071-.283-.142-1.192-.44-2.271-1.403-.839-.748-1.406-1.671-1.571-1.954-.164-.283-.017-.437.125-.577.127-.126.282-.331.424-.496.142-.165.188-.283.283-.472.094-.19.047-.354-.023-.496-.071-.142-.634-1.531-.868-2.097-.228-.551-.459-.477-.633-.486-.164-.008-.352-.01-.54-.01-.188 0-.494.071-.752.354-.258.283-.986.964-.986 2.355s1.01 2.733 1.151 2.922c.142.189 1.986 3.033 4.811 4.254.672.29 1.197.463 1.606.592.675.214 1.289.184 1.774.111.54-.082 1.666-.68 1.901-1.337.235-.656.235-1.22.165-1.337-.07-.118-.258-.19-.54-.331z"
           />
@@ -209,20 +301,56 @@
 
     <!-- Navbar -->
     <div class="fixed top-8 left-0 w-full z-[9990] px-4">
-      <nav class="max-w-3xl mx-auto glass border border-white/50 shadow-xl rounded-full px-6 py-3">
+      <nav
+        class="max-w-3xl mx-auto glass border border-white/50 shadow-xl rounded-full px-6 py-3"
+      >
         <div class="flex justify-between items-center">
           <a href="#" class="block">
-            <img class="h-6 md:h-7 w-auto" src="assets/images/2-2.png" alt="Logo" onerror="this.src = 'https://via.placeholder.com/100x30?text=LOGO'" />
+            <img
+              class="h-6 md:h-7 w-auto"
+              src="assets/images/2-2.png"
+              alt="Logo"
+              onerror="
+                this.src = 'https://via.placeholder.com/100x30?text=LOGO'
+              "
+            />
           </a>
           <div class="hidden md:flex items-center gap-6">
-            <a href="#about" class="nav-pill-link text-[11px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition">About</a>
-            <a href="#service" class="nav-pill-link text-[11px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition">Services</a>
-            <a href="#portofolio" class="nav-pill-link text-[11px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition">Portfolio</a>
-            <a href="#" class="nav-pill-link text-[11px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition">Contacts</a>
+            <a
+              href="#about"
+              class="nav-pill-link text-[11px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition"
+              >About</a
+            >
+            <a
+              href="#service"
+              class="nav-pill-link text-[11px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition"
+              >Services</a
+            >
+            <a
+              href="#portofolio"
+              class="nav-pill-link text-[11px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition"
+              >Portfolio</a
+            >
+            <a
+              href="#"
+              class="nav-pill-link text-[11px] font-extrabold uppercase tracking-widest text-gray-800 hover:text-primary transition"
+              >Contacts</a
+            >
           </div>
           <button id="menu-toggle" class="md:hidden p-2 text-gray-900">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
         </div>
@@ -230,193 +358,376 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#1a1a1a]">
-      <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url(&quot;assets/images/Hero.jpg&quot;)">
+    <section
+      class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          src="assets/images/Hero.jpg"
+          alt="Hero Background"
+          class="w-full h-full object-cover scale-105"
+          onerror="
+            this.src =
+              'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000'
+          "
+        />
         <div class="absolute inset-0 hero-gradient"></div>
       </div>
-      <div class="relative z-10 max-w-5xl mx-auto px-6 text-white pt-20 text-center md:text-left">
-        <img src="assets/images/1-1.png" alt="Logo" class="size-20 mb-120 mx-auto md:mx-0" />
-        <!-- Dihapus tracking-tighter agar huruf tidak menumpuk -->
-        <h2 class="text-5xl md:text-6xl font-black text-luxury leading-[0.85] mb-5 tracking-normal">Kegagalan Saat<br /><span class="text-primary">Bangun Rumah.</span></h2>
-        <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed mb-16 opacity-80 tracking-normal">"Hampir selalu di mulai dari tim yang salah."</p>
+
+      <div
+        class="relative z-10 w-full max-w-7xl mx-auto md:px-6 text-center mt-16 md:mt-0"
+      >
+        <!-- Professional Small Image/Logo Placement -->
+        <div class="mb-0 inline-flex items-center justify-center">
+          <div class="p-3 rounded-2xl shadow-2xl">
+            <img
+              src="assets/images/1-1.png"
+              alt="Icon"
+              class="size-28 md:size-16 object-contain"
+            />
+          </div>
+        </div>
+
+        <!-- Headline with High-End Typography -->
+        <h1
+          class="text-[45px]/[1.1px] sm:text-6xl md:text-[90px] lg:text-[110px] font-black text-white leading-[1.1] md:leading-[0.85] tracking-tight uppercase text-balance mb-2 md:mb-10 w-full"
+        >
+          Kegagalan Saat<br />
+          <span class="text-primary italic">Bangun Rumah.</span>
+        </h1>
+
+        <!-- Punchline with Subtle Border Detail -->
+        <div class="flex flex-col items-center max-w-2xl mx-auto">
+          <p
+            class="text-[15.5px] md:text-2xl text-white/80 font-medium border-t border-white/20 pt-2 md:pt-8 text-balance uppercase"
+          >
+            "selalu di mulai dari tim yang salah."
+          </p>
+        </div>
+
+        <!-- Scroll HampirIndicator -->
+        <div
+          class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce md:inline-block hidden"
+        >
+          <div
+            class="w-1 h-12 rounded-full bg-gradient-to-b from-primary to-transparent"
+          ></div>
+        </div>
       </div>
     </section>
 
     <!-- Intro Section -->
-    <section id="about" class="py-32 bg-white">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row gap-16 items-start">
-          <div class="w-full md:w-1/2">
-            <h2 class="text-4xl md:text-6xl font-black leading-tight text-gray-900 mb-8 tracking-normal flex flex-col">
-              Disini Kami <span class="whitespace-nowrap"> Kontraktor & Designer</span> <span class="text-primary">Yang Berbeda.</span>
+    <section
+      id="about"
+      class="relative py-32 md:py-48 bg-slate-950 overflow-hidden"
+    >
+      <!-- Decor Element -->
+      <div
+        class="absolute top-0 left-0 w-1/2 h-full bg-primary/5 blur-[120px] pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start"
+        >
+          <!-- Text Area -->
+          <div class="lg:col-span-7">
+            <div
+              class="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-[10px] font-black uppercase tracking-[0.3em] mb-8"
+            >
+              Architectural Excellence
+            </div>
+            <h2
+              class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight uppercase mb-10 tracking-tight"
+            >
+              Disini Kami<br />
+              Kontraktor & Designer<br />
+              <span
+                class="text-primary underline decoration-white/10 underline-offset-8"
+                >Yang Berbeda.</span
+              >
             </h2>
-            <p class="text-lg text-gray-500 font-medium leading-relaxed border-l-4 border-primary pl-6 tracking-normal">
-              Langitlangit.id mendesain & membangun sesuai kebutuhan seluruh penghuni, spesifikasi & material terstandarisasi SNI tanpa drama.
-            </p>
+            <div class="max-w-xl">
+              <p
+                class="text-lg md:text-xl text-slate-400 font-medium leading-relaxed border-l-4 border-primary pl-8 tracking-normal"
+              >
+                Langitlangit.id mendesain & membangun sesuai kebutuhan seluruh
+                penghuni, spesifikasi & material terstandarisasi SNI tanpa
+                drama.
+              </p>
+            </div>
           </div>
-          <div class="w-full md:w-1/2 grid grid-cols-2 gap-6">
-            <!-- USP Cards -->
-            <div class="p-8 bg-gray-50 border border-gray-100 hover:bg-blue-50 transition duration-500 text-center">
-              <div class="text-primary mb-4 text-2xl">✨</div>
-              <h4 class="font-black uppercase text-xs tracking-widest mb-2">Kreatif</h4>
-              <p class="text-[11px] text-gray-400 font-bold uppercase leading-tight">Solusi Ruang Out-of-the-box</p>
+
+          <!-- USP Grid: Modern Sharp Cards -->
+          <div class="lg:col-span-5 grid grid-cols-2 gap-4 md:gap-6">
+            <div
+              class="aspect-square flex flex-col items-center justify-center p-6 md:p-10 bg-white/5 border border-white/10 hover:border-primary/50 transition duration-500 group"
+            >
+              <span
+                class="text-3xl md:text-4xl mb-6 group-hover:scale-125 transition transform duration-500"
+                >✨</span
+              >
+              <h4
+                class="font-black uppercase text-[10px] md:text-xs tracking-[0.2em] text-white mb-3"
+              >
+                Kreatif
+              </h4>
+              <p
+                class="text-[9px] md:text-[11px] text-slate-500 font-bold uppercase leading-tight text-center"
+              >
+                Solusi Ruang Out-of-the-box
+              </p>
             </div>
-            <div class="p-8 bg-gray-50 border border-gray-100 hover:bg-blue-50 transition duration-500 text-center">
-              <div class="text-primary mb-4 text-2xl">💬</div>
-              <h4 class="font-black uppercase text-xs tracking-widest mb-2">Komunikatif</h4>
-              <p class="text-[11px] text-gray-400 font-bold uppercase leading-tight">Report Digital Otomatis</p>
+            <div
+              class="aspect-square flex flex-col items-center justify-center p-6 md:p-10 bg-white/5 border border-white/10 hover:border-primary/50 transition duration-500 group"
+            >
+              <span
+                class="text-3xl md:text-4xl mb-6 group-hover:scale-125 transition transform duration-500"
+                >💬</span
+              >
+              <h4
+                class="font-black uppercase text-[10px] md:text-xs tracking-[0.2em] text-white mb-3"
+              >
+                Komunikatif
+              </h4>
+              <p
+                class="text-[9px] md:text-[11px] text-slate-500 font-bold uppercase leading-tight text-center"
+              >
+                Report Digital Otomatis
+              </p>
             </div>
-            <div class="p-8 bg-gray-50 border border-gray-100 hover:bg-blue-50 transition duration-500 text-center">
-              <div class="text-primary mb-4 text-2xl">🔍</div>
-              <h4 class="font-black uppercase text-xs tracking-widest mb-2">Detail</h4>
-              <p class="text-[11px] text-gray-400 font-bold uppercase leading-tight">Material Berstandar SNI</p>
+            <div
+              class="aspect-square flex flex-col items-center justify-center p-6 md:p-10 bg-white/5 border border-white/10 hover:border-primary/50 transition duration-500 group"
+            >
+              <span
+                class="text-3xl md:text-4xl mb-6 group-hover:scale-125 transition transform duration-500"
+                >🔍</span
+              >
+              <h4
+                class="font-black uppercase text-[10px] md:text-xs tracking-[0.2em] text-white mb-3"
+              >
+                Detail
+              </h4>
+              <p
+                class="text-[9px] md:text-[11px] text-slate-500 font-bold uppercase leading-tight text-center"
+              >
+                Material Berstandar SNI
+              </p>
             </div>
-            <div class="p-8 bg-gray-50 border border-gray-100 hover:bg-blue-50 transition duration-500 text-center">
-              <div class="text-primary mb-4 text-2xl">🎯</div>
-              <h4 class="font-black uppercase text-xs tracking-widest mb-2">Akurat</h4>
-              <p class="text-[11px] text-gray-400 font-bold uppercase leading-tight">RAB Sesuai Realita</p>
+            <div
+              class="aspect-square flex flex-col items-center justify-center p-6 md:p-10 bg-white/5 border border-white/10 hover:border-primary/50 transition duration-500 group"
+            >
+              <span
+                class="text-3xl md:text-4xl mb-6 group-hover:scale-125 transition transform duration-500"
+                >🎯</span
+              >
+              <h4
+                class="font-black uppercase text-[10px] md:text-xs tracking-[0.2em] text-white mb-3"
+              >
+                Akurat
+              </h4>
+              <p
+                class="text-[9px] md:text-[11px] text-slate-500 font-bold uppercase leading-tight text-center"
+              >
+                RAB Sesuai Realita
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-   <!-- Luxury Steps Section -->
-  <section id="service" class="py-32 bg-white overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6">
-      
-      <!-- Header Section -->
-      <div class="text-center mb-24">
-        <span class="text-primary font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">Our Process</span>
-        <h3 class="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-normal">Langkah Paling Aman.</h3>
+    <!-- UPDATED Professional Roadmap Service Section -->
+    <section
+      id="service"
+      class="py-32 bg-gray-50 overflow-hidden roadmap-container"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-24">
+          <span
+            class="text-primary font-black uppercase tracking-[0.4em] text-[10px] mb-4 block"
+            >Our Process</span
+          >
+          <h3
+            class="text-4xl md:text-6xl font-black text-gray-900 uppercase tracking-tight"
+          >
+            Langkah Paling Aman.
+          </h3>
+          <p class="text-gray-500 mt-6 max-w-2xl mx-auto font-medium">
+            Sistem kerja terstruktur yang dirancang untuk menjamin keamanan
+            investasi bangunan Anda dari awal hingga serah terima.
+          </p>
+        </div>
+
+        <div class="relative min-h-[1200px] md:min-h-[1400px]">
+          <!-- Geometric Curve Line (SVG) - Longer Transitions, Rigid but Rounded -->
+          <svg
+            class="absolute inset-0 w-full h-full pointer-events-none hidden md:block"
+            preserveAspectRatio="none"
+            viewBox="0 0 1000 1400"
+          >
+            <path
+              class="roadmap-path"
+              d="M 120 40 
+                     L 120 120
+                     Q 120 180, 200 180
+                     L 800 180
+                     Q 880 180, 880 240
+                     L 880 440
+                     Q 880 500, 800 500
+                     L 200 500
+                     Q 120 500, 120 560
+                     L 120 760
+                     Q 120 820, 200 820
+                     L 800 820
+                     Q 880 820, 880 880
+                     L 880 1080
+                     Q 880 1140, 800 1140
+                     L 120 1140
+                     L 120 1300"
+              stroke="#155a8f"
+              stroke-width="2"
+              fill="transparent"
+              stroke-dasharray="12 12"
+              opacity="0.2"
+            />
+          </svg>
+
+          <!-- Mobile Simple Vertical Line -->
+          <div
+            class="absolute left-8 top-0 bottom-0 w-[2px] bg-primary/20 md:hidden border-dashed border-l-2"
+          ></div>
+
+          <!-- Roadmap Nodes & Content -->
+          <div class="relative">
+            <!-- Step 01 -->
+            <div
+              class="roadmap-step flex flex-col md:flex-row items-start md:items-center md:absolute md:top-0 md:left-[60px] gap-6"
+              style="transition-delay: 0.1s"
+            >
+              <div
+                class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-black text-lg shadow-lg shadow-primary/20 z-10"
+              >
+                01
+              </div>
+              <div
+                class="max-w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-500"
+              >
+                <h4 class="text-lg font-black text-gray-900 uppercase mb-2">
+                  Informasi
+                </h4>
+                <p
+                  class="text-[13px] text-gray-500 font-medium leading-relaxed"
+                >
+                  Pahami kebutuhan & konsep hunian impian Anda secara mendalam
+                  melalui konsultasi eksklusif.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 02 -->
+            <div
+              class="roadmap-step flex flex-col md:flex-row-reverse items-start md:items-center md:absolute md:top-[300px] md:right-[60px] gap-6"
+              style="transition-delay: 0.4s"
+            >
+              <div
+                class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-black text-lg shadow-lg shadow-primary/20 z-10"
+              >
+                02
+              </div>
+              <div
+                class="max-w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 md:text-right"
+              >
+                <h4 class="text-lg font-black text-gray-900 uppercase mb-2">
+                  Survey
+                </h4>
+                <p
+                  class="text-[13px] text-gray-500 font-medium leading-relaxed"
+                >
+                  Pengumpulan data existing lapangan dengan presisi tinggi untuk
+                  akurasi desain konstruksi.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div
+              class="roadmap-step flex flex-col md:flex-row items-start md:items-center md:absolute md:top-[620px] md:left-[60px] gap-6"
+              style="transition-delay: 0.7s"
+            >
+              <div
+                class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-black text-lg shadow-lg shadow-primary/20 z-10"
+              >
+                03
+              </div>
+              <div
+                class="max-w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-500"
+              >
+                <h4 class="text-lg font-black text-gray-900 uppercase mb-2">
+                  Design
+                </h4>
+                <p
+                  class="text-[13px] text-gray-500 font-medium leading-relaxed"
+                >
+                  Rancang konsep hunian estetis yang fungsional sesuai dengan
+                  rencana anggaran Anda.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 04 -->
+            <div
+              class="roadmap-step flex flex-col md:flex-row-reverse items-start md:items-center md:absolute md:top-[940px] md:right-[60px] gap-6"
+              style="transition-delay: 1s"
+            >
+              <div
+                class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-black text-lg shadow-lg shadow-primary/20 z-10"
+              >
+                04
+              </div>
+              <div
+                class="max-w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 md:text-right"
+              >
+                <h4 class="text-lg font-black text-gray-900 uppercase mb-2">
+                  Estimasi RAB
+                </h4>
+                <p
+                  class="text-[13px] text-gray-500 font-medium leading-relaxed"
+                >
+                  Transparansi biaya dan spesifikasi material akurat tanpa ada
+                  biaya tersembunyi di kemudian hari.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 05 -->
+            <div
+              class="roadmap-step flex flex-col md:flex-row items-start md:items-center md:absolute md:top-[1240px] md:left-[60px] gap-6"
+              style="transition-delay: 1.3s"
+            >
+              <div
+                class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-black text-lg shadow-lg shadow-primary/20 z-10"
+              >
+                05
+              </div>
+              <div
+                class="max-w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-500"
+              >
+                <h4 class="text-lg font-black text-gray-900 uppercase mb-2">
+                  Pelaksanaan
+                </h4>
+                <p
+                  class="text-[13px] text-gray-500 font-medium leading-relaxed"
+                >
+                  Pembangunan sistematis dengan pengawasan digital yang ketat
+                  untuk kualitas bangunan SNI.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <!-- Grid Container (5 Columns) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-        
-        <!-- Step 01 -->
-        <div class="group relative h-[400px] w-full bg-cardDark overflow-hidden shadow-2xl cursor-pointer">
-          <!-- Image -->
-          <img
-            src="assets/images/steps/informasi.jpeg"
-            class="absolute inset-0 w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-110 transition duration-[1.5s] ease-out"
-            alt="Informasi"
-            onerror="this.src = 'https://images.unsplash.com/photo-1600880212340-02d956ea3d89?q=80&w=600&auto=format&fit=crop'"
-          />
-          
-          <!-- Text Overlay (Inside the card/photo) -->
-          <div class="absolute inset-0 glass-gradient flex flex-col justify-end p-8">
-            <div class="flex items-center gap-2 mb-1">
-              <span class="text-primary font-black text-[12px]">01 /</span>
-              <h4 class="text-[15px] font-black uppercase tracking-widest text-white">Informasi</h4>
-            </div>
-            
-            <!-- Expandable Description -->
-            <div class="expand-content">
-              <div class="overflow-hidden">
-                <p class="text-[11px] font-medium leading-relaxed text-gray-300 pt-3 border-t border-white/10 mt-2 uppercase tracking-wide">
-                  Pahami kebutuhan & konsep hunian impian Anda secara mendalam.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 02 -->
-        <div class="group relative h-[400px] w-full bg-cardDark overflow-hidden shadow-2xl cursor-pointer">
-          <img
-            src="assets/images/steps/survey.jpeg"
-            class="absolute inset-0 w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-110 transition duration-[1.5s] ease-out"
-            alt="Survey"
-            onerror="this.src = 'https://images.unsplash.com/photo-1503387762-592dee58c460?q=80&w=600&auto=format&fit=crop'"
-          />
-          <div class="absolute inset-0 glass-gradient flex flex-col justify-end p-8">
-            <div class="flex items-center gap-2 mb-1">
-              <span class="text-primary font-black text-[12px]">02 /</span>
-              <h4 class="text-[15px] font-black uppercase tracking-widest text-white">Survey</h4>
-            </div>
-            <div class="expand-content">
-              <div class="overflow-hidden">
-                <p class="text-[11px] font-medium leading-relaxed text-gray-300 pt-3 border-t border-white/10 mt-2 uppercase tracking-wide">
-                  Pengumpulan data existing lapangan dengan presisi tinggi.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 03 -->
-        <div class="group relative h-[400px] w-full bg-cardDark overflow-hidden shadow-2xl cursor-pointer">
-          <img
-            src="assets/images/steps/designs.jpeg"
-            class="absolute inset-0 w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-110 transition duration-[1.5s] ease-out"
-            alt="Design"
-            onerror="this.src = 'https://images.unsplash.com/photo-1503387837-b154d5074bd2?q=80&w=600&auto=format&fit=crop'"
-          />
-          <div class="absolute inset-0 glass-gradient flex flex-col justify-end p-8">
-            <div class="flex items-center gap-2 mb-1">
-              <span class="text-primary font-black text-[12px]">03 /</span>
-              <h4 class="text-[15px] font-black uppercase tracking-widest text-white">Design</h4>
-            </div>
-            <div class="expand-content">
-              <div class="overflow-hidden">
-                <p class="text-[11px] font-medium leading-relaxed text-gray-300 pt-3 border-t border-white/10 mt-2 uppercase tracking-wide">
-                  Rancang konsep hunian estetis sesuai dengan rencana anggaran.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 04 -->
-        <div class="group relative h-[400px] w-full bg-cardDark overflow-hidden shadow-2xl cursor-pointer">
-          <img
-            src="assets/images/steps/rab.jpeg"
-            class="absolute inset-0 w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-110 transition duration-[1.5s] ease-out"
-            alt="Estimasi RAB"
-            onerror="this.src = 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop'"
-          />
-          <div class="absolute inset-0 glass-gradient flex flex-col justify-end p-8">
-            <div class="flex items-center gap-2 mb-1">
-              <span class="text-primary font-black text-[12px]">04 /</span>
-              <h4 class="text-[15px] font-black uppercase tracking-widest text-white">Estimasi RAB</h4>
-            </div>
-            <div class="expand-content">
-              <div class="overflow-hidden">
-                <p class="text-[11px] font-medium leading-relaxed text-gray-300 pt-3 border-t border-white/10 mt-2 uppercase tracking-wide">
-                  Transparansi biaya dan material akurat tanpa biaya tersembunyi.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 05 -->
-        <div class="group relative h-[400px] w-full bg-cardDark overflow-hidden shadow-2xl cursor-pointer">
-          <img
-            src="assets/images/steps/pelaksana.jpeg"
-            class="absolute inset-0 w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-110 transition duration-[1.5s] ease-out"
-            alt="Pelaksanaan"
-            onerror="this.src = 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=600&auto=format&fit=crop'"
-          />
-          <div class="absolute inset-0 glass-gradient flex flex-col justify-end p-8">
-            <div class="flex items-center gap-2 mb-1">
-              <span class="text-primary font-black text-[12px]">05 /</span>
-              <h4 class="text-[15px] font-black uppercase tracking-widest text-white">Pelaksanaan</h4>
-            </div>
-            <div class="expand-content">
-              <div class="overflow-hidden">
-                <p class="text-[11px] font-medium leading-relaxed text-gray-300 pt-3 border-t border-white/10 mt-2 uppercase tracking-wide">
-                  Pembangunan sistematis dengan pengawasan digital yang ketat.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+    </section>
 
     <!-- Portfolio Area -->
     <div class="overflow-hidden">
@@ -424,44 +735,102 @@
       <section id="portofolio" class="py-32 bg-slate-950">
         <div class="max-w-7xl mx-auto px-6">
           <div class="text-center mb-20">
-            <h3 class="text-5xl font-black text-white mb-6 tracking-normal">Project Design</h3>
-            <p class="text-lg text-slate-400 font-medium">Hasil design tim arsitek langitlangit.id</p>
+            <h3 class="text-5xl font-black text-white mb-6 tracking-normal">
+              Project Design
+            </h3>
+            <p class="text-lg text-slate-400 font-medium">
+              Hasil design tim arsitek langitlangit.id
+            </p>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 md:gap-12 text-center"
+          >
             <div class="group">
               <div class="aspect-[9/16] overflow-hidden shadow-2xl mb-6">
-                <img src="assets/images/designs/1.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000 ease-in-out" onerror="this.src = 'https://via.placeholder.com/600x800?text=Design+1'" />
+                <img
+                  src="assets/images/designs/1.jpeg"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-1000 ease-in-out"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/600x800?text=Design+1'
+                  "
+                />
               </div>
               <div class="px-2">
-                <h4 class="text-xl font-bold text-white mb-1 leading-tight">H&S House</h4>
-                <p class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag">📍 BSD, Tanggerang</p>
+                <h4 class="text-xl font-bold text-white mb-1 leading-tight">
+                  H&S House
+                </h4>
+                <p
+                  class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag"
+                >
+                  📍 BSD, Tanggerang
+                </p>
               </div>
             </div>
             <div class="group">
               <div class="aspect-[9/16] overflow-hidden shadow-2xl mb-6">
-                <img src="assets/images/designs/2.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000 ease-in-out" onerror="this.src = 'https://via.placeholder.com/600x800?text=Design+2'" />
+                <img
+                  src="assets/images/designs/2.jpeg"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-1000 ease-in-out"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/600x800?text=Design+2'
+                  "
+                />
               </div>
               <div class="px-2">
-                <h4 class="text-xl font-bold text-white mb-1 leading-tight">R&M House</h4>
-                <p class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag">📍 Sentul City, Sentul</p>
+                <h4 class="text-xl font-bold text-white mb-1 leading-tight">
+                  R&M House
+                </h4>
+                <p
+                  class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag"
+                >
+                  📍 Sentul City, Sentul
+                </p>
               </div>
             </div>
             <div class="group">
               <div class="aspect-[9/16] overflow-hidden shadow-2xl mb-6">
-                <img src="assets/images/designs/3.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000 ease-in-out" onerror="this.src = 'https://via.placeholder.com/600x800?text=Design+3'" />
+                <img
+                  src="assets/images/designs/3.jpeg"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-1000 ease-in-out"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/600x800?text=Design+3'
+                  "
+                />
               </div>
               <div class="px-2">
-                <h4 class="text-xl font-bold text-white mb-1 leading-tight">B&K House</h4>
-                <p class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag">📍 PIK, Jakarta</p>
+                <h4 class="text-xl font-bold text-white mb-1 leading-tight">
+                  B&K House
+                </h4>
+                <p
+                  class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag"
+                >
+                  📍 PIK, Jakarta
+                </p>
               </div>
             </div>
             <div class="group">
               <div class="aspect-[9/16] overflow-hidden shadow-2xl mb-6">
-                <img src="assets/images/designs/4.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000 ease-in-out" onerror="this.src = 'https://via.placeholder.com/600x800?text=Design+4'" />
+                <img
+                  src="assets/images/designs/4.jpeg"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-1000 ease-in-out"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/600x800?text=Design+4'
+                  "
+                />
               </div>
               <div class="px-2">
-                <h4 class="text-xl font-bold text-white mb-1 leading-tight">C&P House</h4>
-                <p class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag">📍 Canggu, Bali</p>
+                <h4 class="text-xl font-bold text-white mb-1 leading-tight">
+                  C&P House
+                </h4>
+                <p
+                  class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag"
+                >
+                  📍 Canggu, Bali
+                </p>
               </div>
             </div>
           </div>
@@ -472,44 +841,104 @@
       <section class="py-32 bg-white">
         <div class="max-w-7xl mx-auto px-6">
           <div class="text-center mb-20">
-            <h3 class="text-5xl font-black text-gray-900 mb-6 uppercase tracking-normal">Telah dipercaya oleh lebih dari 1k+ Clients</h3>
-            <p class="text-lg text-gray-400 font-medium">Hasil project pembangunan langitlangit.id</p>
+            <h3
+              class="text-5xl font-black text-gray-900 mb-6 uppercase tracking-normal"
+            >
+              Telah dipercaya oleh lebih dari 1k+ Clients
+            </h3>
+            <p class="text-lg text-gray-400 font-medium">
+              Hasil project pembangunan langitlangit.id
+            </p>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 md:gap-12 text-center"
+          >
             <div class="group">
               <div class="aspect-[9/16] overflow-hidden shadow-2xl mb-6">
-                <img src="assets/images/sipils/01.jpeg" class="w-full h-full object-cover" onerror="this.src = 'https://via.placeholder.com/600x800?text=Civil+1'" />
+                <img
+                  src="assets/images/sipils/01.jpeg"
+                  class="w-full h-full object-cover"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/600x800?text=Civil+1'
+                  "
+                />
               </div>
               <div class="px-2">
-                <h4 class="text-lg font-bold text-gray-900 mb-1 leading-tight">B&W House</h4>
-                <p class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag">📍 Kaliurang, Sleman</p>
+                <h4 class="text-lg font-bold text-gray-900 mb-1 leading-tight">
+                  B&W House
+                </h4>
+                <p
+                  class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag"
+                >
+                  📍 Kaliurang, Sleman
+                </p>
               </div>
             </div>
             <div class="group">
               <div class="aspect-[9/16] overflow-hidden shadow-2xl mb-6">
-                <img src="assets/images/sipils/02.jpeg" class="w-full h-full object-cover" onerror="this.src = 'https://via.placeholder.com/600x800?text=Civil+2'" />
+                <img
+                  src="assets/images/sipils/02.jpeg"
+                  class="w-full h-full object-cover"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/600x800?text=Civil+2'
+                  "
+                />
               </div>
               <div class="px-2">
-                <h4 class="text-lg font-bold text-gray-900 mb-1 leading-tight">V&N House</h4>
-                <p class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag">📍 Lembang, Bandung</p>
+                <h4 class="text-lg font-bold text-gray-900 mb-1 leading-tight">
+                  V&N House
+                </h4>
+                <p
+                  class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag"
+                >
+                  📍 Lembang, Bandung
+                </p>
               </div>
             </div>
             <div class="group">
               <div class="aspect-[9/16] overflow-hidden shadow-2xl mb-6">
-                <img src="assets/images/sipils/03.jpeg" class="w-full h-full object-cover" onerror="this.src = 'https://via.placeholder.com/600x800?text=Civil+3'" />
+                <img
+                  src="assets/images/sipils/03.jpeg"
+                  class="w-full h-full object-cover"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/600x800?text=Civil+3'
+                  "
+                />
               </div>
               <div class="px-2">
-                <h4 class="text-lg font-bold text-gray-900 mb-1 leading-tight">N&P House</h4>
-                <p class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag">📍 Manyar, Surabaya</p>
+                <h4 class="text-lg font-bold text-gray-900 mb-1 leading-tight">
+                  N&P House
+                </h4>
+                <p
+                  class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag"
+                >
+                  📍 Manyar, Surabaya
+                </p>
               </div>
             </div>
             <div class="group">
               <div class="aspect-[9/16] overflow-hidden shadow-2xl mb-6">
-                <img src="assets/images/sipils/04.jpeg" class="w-full h-full object-cover" onerror="this.src = 'https://via.placeholder.com/600x800?text=Civil+4'" />
+                <img
+                  src="assets/images/sipils/04.jpeg"
+                  class="w-full h-full object-cover"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/600x800?text=Civil+4'
+                  "
+                />
               </div>
               <div class="px-2">
-                <h4 class="text-lg font-bold text-gray-900 mb-1 leading-tight">K&Y House</h4>
-                <p class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag">📍 Jimbaran, Bali</p>
+                <h4 class="text-lg font-bold text-gray-900 mb-1 leading-tight">
+                  K&Y House
+                </h4>
+                <p
+                  class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag"
+                >
+                  📍 Jimbaran, Bali
+                </p>
               </div>
             </div>
           </div>
@@ -520,44 +949,102 @@
       <section class="py-32 bg-slate-950">
         <div class="max-w-7xl mx-auto px-6">
           <div class="text-center mb-20">
-            <h3 class="text-5xl font-black text-white mb-6 tracking-normal">Project Interior</h3>
-            <p class="text-lg text-slate-400 font-medium">Hasil project interior langitlangit.id</p>
+            <h3 class="text-5xl font-black text-white mb-6 tracking-normal">
+              Project Interior
+            </h3>
+            <p class="text-lg text-slate-400 font-medium">
+              Hasil project interior langitlangit.id
+            </p>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 md:gap-12 text-center"
+          >
             <div class="group">
               <div class="aspect-[9/16] overflow-hidden shadow-2xl mb-6">
-                <img src="assets/images/interiors/01.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" onerror="this.src = 'https://via.placeholder.com/600x800?text=Interior+1'" />
+                <img
+                  src="assets/images/interiors/01.jpeg"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/600x800?text=Interior+1'
+                  "
+                />
               </div>
               <div class="px-2">
-                <h4 class="text-xl font-bold text-white mb-1 leading-tight">A&R House</h4>
-                <p class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag">📍 Pondok Indah, Jakarta</p>
+                <h4 class="text-xl font-bold text-white mb-1 leading-tight">
+                  A&R House
+                </h4>
+                <p
+                  class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag"
+                >
+                  📍 Pondok Indah, Jakarta
+                </p>
               </div>
             </div>
             <div class="group">
               <div class="aspect-[9/16] overflow-hidden shadow-2xl mb-6">
-                <img src="assets/images/interiors/02.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" onerror="this.src = 'https://via.placeholder.com/600x800?text=Interior+2'" />
+                <img
+                  src="assets/images/interiors/02.jpeg"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/600x800?text=Interior+2'
+                  "
+                />
               </div>
               <div class="px-2">
-                <h4 class="text-xl font-bold text-white mb-1 leading-tight">C&P House</h4>
-                <p class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag">📍 Canggu, Bali</p>
+                <h4 class="text-xl font-bold text-white mb-1 leading-tight">
+                  C&P House
+                </h4>
+                <p
+                  class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag"
+                >
+                  📍 Canggu, Bali
+                </p>
               </div>
             </div>
             <div class="group">
               <div class="aspect-[9/16] overflow-hidden shadow-2xl mb-6">
-                <img src="assets/images/interiors/03.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" onerror="this.src = 'https://via.placeholder.com/600x800?text=Interior+3'" />
+                <img
+                  src="assets/images/interiors/03.jpeg"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/600x800?text=Interior+3'
+                  "
+                />
               </div>
               <div class="px-2">
-                <h4 class="text-xl font-bold text-white mb-1 leading-tight">R&M House</h4>
-                <p class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag">📍 Sentul City, Sentul</p>
+                <h4 class="text-xl font-bold text-white mb-1 leading-tight">
+                  R&M House
+                </h4>
+                <p
+                  class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag"
+                >
+                  📍 Sentul City, Sentul
+                </p>
               </div>
             </div>
             <div class="group">
               <div class="aspect-[9/16] overflow-hidden shadow-2xl mb-6">
-                <img src="assets/images/interiors/04.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" onerror="this.src = 'https://via.placeholder.com/600x800?text=Interior+4'" />
+                <img
+                  src="assets/images/interiors/04.jpeg"
+                  class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/600x800?text=Interior+4'
+                  "
+                />
               </div>
               <div class="px-2">
-                <h4 class="text-xl font-bold text-white mb-1 leading-tight">D&K House</h4>
-                <p class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag">📍 Kemang, Jakarta</p>
+                <h4 class="text-xl font-bold text-white mb-1 leading-tight">
+                  D&K House
+                </h4>
+                <p
+                  class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase location-tag"
+                >
+                  📍 Kemang, Jakarta
+                </p>
               </div>
             </div>
           </div>
@@ -568,65 +1055,163 @@
     <!-- Team Section -->
     <section class="py-32 bg-white text-black">
       <div class="max-w-7xl mx-auto px-6">
-        <h3 class="text-5xl md:text-7xl font-black text-center mb-32 tracking-normal uppercase">Meet the creators</h3>
+        <h3
+          class="text-5xl md:text-7xl font-black text-center mb-32 tracking-normal uppercase"
+        >
+          Meet the creators
+        </h3>
         <div class="flex flex-wrap justify-center gap-y-16 md:gap-y-24 -mx-4">
           <!-- Member 1 -->
           <div class="w-1/3 md:w-1/4 px-2 md:px-6 text-center group">
-            <div class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500">
-              <img src="assets/images/mg-1264.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" onerror="this.src = 'https://via.placeholder.com/400'" />
+            <div
+              class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500"
+            >
+              <img
+                src="assets/images/mg-1264.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
             </div>
-            <h5 class="text-sm md:text-2xl font-bold tracking-tight">Heni RL</h5>
-            <p class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2">Founder</p>
+            <h5 class="text-sm md:text-2xl font-bold tracking-tight">
+              Heni RL
+            </h5>
+            <p
+              class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2"
+            >
+              Founder
+            </p>
           </div>
           <!-- Member 2 -->
           <div class="w-1/3 md:w-1/4 px-2 md:px-6 text-center group">
-            <div class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500">
-              <img src="assets/images/mg-1238.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" onerror="this.src = 'https://via.placeholder.com/400'" />
+            <div
+              class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500"
+            >
+              <img
+                src="assets/images/mg-1238.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
             </div>
-            <h5 class="text-sm md:text-2xl font-bold tracking-tight">Yulia W</h5>
-            <p class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2">Finance</p>
+            <h5 class="text-sm md:text-2xl font-bold tracking-tight">
+              Yulia W
+            </h5>
+            <p
+              class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2"
+            >
+              Head of Finance
+            </p>
           </div>
           <div class="w-1/3 md:w-1/4 px-2 md:px-6 text-center group">
-            <div class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500">
-              <img src="assets/images/screenshot-2026-02-15.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" onerror="this.src = 'https://via.placeholder.com/400'" />
+            <div
+              class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500"
+            >
+              <img
+                src="assets/images/screenshot-2026-02-15.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
             </div>
-            <h5 class="text-sm md:text-2xl font-bold tracking-tight">Ihsanuz Z</h5>
-            <p class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2">Supervisor</p>
+            <h5 class="text-sm md:text-2xl font-bold tracking-tight">
+              Ihsanuz Z
+            </h5>
+            <p
+              class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2"
+            >
+              Design Supervisor
+            </p>
           </div>
           <div class="w-1/3 md:w-1/4 px-2 md:px-6 text-center group">
-            <div class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500">
-              <img src="assets/images/screenshot-2026-2.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" onerror="this.src = 'https://via.placeholder.com/400'" />
+            <div
+              class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500"
+            >
+              <img
+                src="assets/images/screenshot-2026-2.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
             </div>
-            <h5 class="text-sm md:text-2xl font-bold tracking-tight">Lude LP</h5>
-            <p class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2">Marketing</p>
+            <h5 class="text-sm md:text-2xl font-bold tracking-tight">
+              Lude LP
+            </h5>
+            <p
+              class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2"
+            >
+              Marketing Executive
+            </p>
           </div>
           <div class="w-1/3 md:w-1/4 px-2 md:px-6 text-center group">
-            <div class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500">
-              <img src="assets/images/screenshot-2026-3.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" onerror="this.src = 'https://via.placeholder.com/400'" />
+            <div
+              class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500"
+            >
+              <img
+                src="assets/images/screenshot-2026-3.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
             </div>
             <h5 class="text-sm md:text-2xl font-bold tracking-tight">Dita A</h5>
-            <p class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2">Procurement</p>
+            <p
+              class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2"
+            >
+              Procurement
+            </p>
           </div>
           <div class="w-1/3 md:w-1/4 px-2 md:px-6 text-center group">
-            <div class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500">
-              <img src="assets/images/screenshot-2026-4.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" onerror="this.src = 'https://via.placeholder.com/400'" />
+            <div
+              class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500"
+            >
+              <img
+                src="assets/images/screenshot-2026-4.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
             </div>
-            <h5 class="text-sm md:text-2xl font-bold tracking-tight">S. Indra</h5>
-            <p class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2">Estimating</p>
+            <h5 class="text-sm md:text-2xl font-bold tracking-tight">
+              S. Indra
+            </h5>
+            <p
+              class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2"
+            >
+              Estimating
+            </p>
           </div>
           <div class="w-1/3 md:w-1/4 px-2 md:px-6 text-center group">
-            <div class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500">
-              <img src="assets/images/mg-1313.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" onerror="this.src = 'https://via.placeholder.com/400'" />
+            <div
+              class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500"
+            >
+              <img
+                src="assets/images/mg-1313.jpeg"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
             </div>
-            <h5 class="text-sm md:text-2xl font-bold tracking-tight">Adli FM</h5>
-            <p class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2">Site Spv</p>
+            <h5 class="text-sm md:text-2xl font-bold tracking-tight">
+              Adli FM
+            </h5>
+            <p
+              class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2"
+            >
+              Site Supervisor
+            </p>
           </div>
           <div class="w-1/3 md:w-1/4 px-2 md:px-6 text-center group">
-            <div class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500">
-              <img src="assets/images/screenshot-2026-5.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" onerror="this.src = 'https://via.placeholder.com/400'" />
+            <div
+              class="relative overflow-hidden aspect-square mb-6 bg-gray-900 shadow-2xl group-hover:shadow-primary/20 transition duration-500"
+            >
+              <img
+                src="assets/images/screenshot-2026-5.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                onerror="this.src = 'https://via.placeholder.com/400'"
+              />
             </div>
-            <h5 class="text-sm md:text-2xl font-bold tracking-tight">M. Rafly</h5>
-            <p class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2">Developer</p>
+            <h5 class="text-sm md:text-2xl font-bold tracking-tight">
+              M. Rafly
+            </h5>
+            <p
+              class="text-primary text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-black mt-2"
+            >
+              Fullstack Developer
+            </p>
           </div>
         </div>
       </div>
@@ -634,18 +1219,38 @@
 
     <!-- Section Unduh Pricelist -->
     <section class="py-32 bg-slate-950 relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] -mr-64 -mt-64"></div>
-      <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -ml-64 -mb-64"></div>
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] -mr-64 -mt-64"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -ml-64 -mb-64"
+      ></div>
       <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
-        <h2 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-normal uppercase leading-[1.1]">SIAP MEMBANGUN <span class="text-primary">MIMPI ANDA?</span></h2>
-        <p class="text-lg md:text-xl text-slate-400 mb-14 font-medium max-w-2xl mx-auto">Dapatkan rincian biaya lengkap untuk rencana pembangunan Anda sekarang.</p>
+        <h2
+          class="text-5xl md:text-7xl font-black text-white mb-8 tracking-normal uppercase leading-[1.1]"
+        >
+          SIAP MEMBANGUN <span class="text-primary">MIMPI ANDA?</span>
+        </h2>
+        <p
+          class="text-lg md:text-xl text-slate-400 mb-14 font-medium max-w-2xl mx-auto"
+        >
+          Dapatkan rincian biaya lengkap untuk rencana pembangunan Anda
+          sekarang.
+        </p>
         <a
           href="PRICELIST ARTISAN DESIGN.pdf"
           download
           class="inline-flex items-center gap-6 bg-white text-slate-950 px-12 py-7 rounded-full text-xl md:text-2xl font-black hover:bg-primary hover:text-white transition-all duration-500 group shadow-[0_25px_60px_rgba(21,90,143,0.25)]"
         >
           UNDUH PRICELIST 2026
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256" class="group-hover:translate-y-1 transition-transform">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+            class="group-hover:translate-y-1 transition-transform"
+          >
             <path
               d="M224,144v64a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V144a8,8,0,0,1,16,0v56H208V144a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,124.69V40a8,8,0,0,0-16,0v84.69L93.66,98.34a8,8,0,0,0-11.32,11.32Z"
             ></path>
@@ -659,13 +1264,30 @@
       <div class="max-w-7xl mx-auto px-6">
         <div class="flex flex-wrap items-end justify-between mb-24 gap-8">
           <div class="max-w-2xl text-left">
-            <span class="inline-block px-5 py-2 rounded-full bg-blue-50 text-[11px] font-black tracking-[0.25em] text-primary uppercase mb-8">Testimonials</span>
-            <h3 class="text-4xl md:text-7xl font-black text-gray-900 tracking-normal leading-tight uppercase">Telah dipercaya oleh lebih dari 1k+ Clients</h3>
+            <span
+              class="inline-block px-5 py-2 rounded-full bg-blue-50 text-[11px] font-black tracking-[0.25em] text-primary uppercase mb-8"
+              >Testimonials</span
+            >
+            <h3
+              class="text-4xl md:text-7xl font-black text-gray-900 tracking-normal leading-tight uppercase"
+            >
+              Telah dipercaya oleh lebih dari 1k+ Clients
+            </h3>
           </div>
           <div class="max-w-md md:text-right">
             <div class="inline-flex p-1.5 bg-gray-100 rounded-2xl">
-              <button class="testi-tab px-10 py-3 rounded-xl bg-white shadow-sm text-sm font-bold transition" data-tab="image">Image</button>
-              <button class="testi-tab px-10 py-3 rounded-xl text-sm font-bold text-gray-400 hover:text-gray-600 transition" data-tab="video">Video</button>
+              <button
+                class="testi-tab px-10 py-3 rounded-xl bg-white shadow-sm text-sm font-bold transition"
+                data-tab="image"
+              >
+                Image
+              </button>
+              <button
+                class="testi-tab px-10 py-3 rounded-xl text-sm font-bold text-gray-400 hover:text-gray-600 transition"
+                data-tab="video"
+              >
+                Video
+              </button>
             </div>
           </div>
         </div>
@@ -674,21 +1296,67 @@
         <div id="testi-image-panel" class="relative">
           <div class="testi-slider-image">
             <div class="px-4">
-              <div class="overflow-hidden border border-gray-100"><img src="assets/images/testis/K1.jpeg" class="w-full" onerror="this.src = 'https://via.placeholder.com/400x600?text=Testi+1'" /></div>
+              <div class="overflow-hidden border border-gray-100">
+                <img
+                  src="assets/images/testis/K1.jpeg"
+                  class="w-full"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/400x600?text=Testi+1'
+                  "
+                />
+              </div>
             </div>
             <div class="px-4">
-              <div class="overflow-hidden border border-gray-100"><img src="assets/images/testis/K2.jpeg" class="w-full" onerror="this.src = 'https://via.placeholder.com/400x600?text=Testi+2'" /></div>
+              <div class="overflow-hidden border border-gray-100">
+                <img
+                  src="assets/images/testis/K2.jpeg"
+                  class="w-full"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/400x600?text=Testi+2'
+                  "
+                />
+              </div>
             </div>
             <div class="px-4">
-              <div class="overflow-hidden border border-gray-100"><img src="assets/images/testis/K3.jpeg" class="w-full" onerror="this.src = 'https://via.placeholder.com/400x600?text=Testi+3'" /></div>
+              <div class="overflow-hidden border border-gray-100">
+                <img
+                  src="assets/images/testis/K3.jpeg"
+                  class="w-full"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/400x600?text=Testi+3'
+                  "
+                />
+              </div>
             </div>
             <div class="px-4">
-              <div class="overflow-hidden border border-gray-100"><img src="assets/images/testis/K4.jpeg" class="w-full" onerror="this.src = 'https://via.placeholder.com/400x600?text=Testi+4'" /></div>
+              <div class="overflow-hidden border border-gray-100">
+                <img
+                  src="assets/images/testis/K4.jpeg"
+                  class="w-full"
+                  onerror="
+                    this.src =
+                      'https://via.placeholder.com/400x600?text=Testi+4'
+                  "
+                />
+              </div>
             </div>
           </div>
           <div class="flex justify-center mt-12 gap-6">
-            <button id="testi-prev" class="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition shadow-sm">←</button>
-            <button id="testi-next" class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition shadow-xl shadow-primary/30">→</button>
+            <button
+              id="testi-prev"
+              class="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition shadow-sm"
+            >
+              ←
+            </button>
+            <button
+              id="testi-next"
+              class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition shadow-xl shadow-primary/30"
+            >
+              →
+            </button>
           </div>
         </div>
 
@@ -696,49 +1364,109 @@
         <div id="testi-video-panel" class="hidden relative">
           <div class="testi-slider-video">
             <div class="px-4">
-              <div class="max-w-[350px] mx-auto aspect-[9/16] bg-black overflow-hidden shadow-2xl">
-                <video class="w-full h-full object-cover" src="assets/videos/tests1.mp4" playsinline controls></video>
+              <div
+                class="max-w-[350px] mx-auto aspect-[9/16] bg-black overflow-hidden shadow-2xl"
+              >
+                <video
+                  class="w-full h-full object-cover"
+                  src="assets/videos/tests1.mp4"
+                  playsinline
+                  controls
+                ></video>
               </div>
             </div>
             <div class="px-4">
-              <div class="max-w-[350px] mx-auto aspect-[9/16] bg-black overflow-hidden shadow-2xl">
-                <video class="w-full h-full object-cover" src="assets/videos/tests1.1.mp4" playsinline controls></video>
+              <div
+                class="max-w-[350px] mx-auto aspect-[9/16] bg-black overflow-hidden shadow-2xl"
+              >
+                <video
+                  class="w-full h-full object-cover"
+                  src="assets/videos/tests1.1.mp4"
+                  playsinline
+                  controls
+                ></video>
               </div>
             </div>
           </div>
           <div class="flex justify-center mt-12 gap-6">
-            <button id="testi-video-prev" class="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition">←</button>
-            <button id="testi-video-next" class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition">→</button>
+            <button
+              id="testi-video-prev"
+              class="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition"
+            >
+              ←
+            </button>
+            <button
+              id="testi-video-next"
+              class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition"
+            >
+              →
+            </button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Form Section -->
-    <section class="py-24 bg-white">
+    <!-- <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="bg-gray-50 rounded-[4rem] shadow-sm overflow-hidden flex flex-wrap border border-gray-100">
+        <div
+          class="bg-gray-50 rounded-[4rem] shadow-sm overflow-hidden flex flex-wrap border border-gray-100"
+        >
           <div class="w-full md:w-1/2 p-10 md:p-20">
-            <h3 class="text-4xl md:text-6xl font-black mb-12 text-gray-900 leading-none uppercase tracking-normal">Contact<br />us</h3>
+            <h3
+              class="text-4xl md:text-6xl font-black mb-12 text-gray-900 leading-none uppercase tracking-normal"
+            >
+              Contact<br />us
+            </h3>
             <form class="space-y-6">
-              <input type="text" placeholder="Name" class="w-full px-8 py-5 rounded-2xl bg-white border-none focus:ring-2 focus:ring-primary transition font-semibold shadow-sm" />
-              <input type="email" placeholder="E-mail" class="w-full px-8 py-5 rounded-2xl bg-white border-none focus:ring-2 focus:ring-primary transition font-semibold shadow-sm" />
-              <input type="tel" placeholder="Phone" class="w-full px-8 py-5 rounded-2xl bg-white border-none focus:ring-2 focus:ring-primary transition font-semibold shadow-sm" />
-              <button class="w-full bg-primary text-white py-6 rounded-2xl font-black uppercase tracking-widest hover:bg-primary/90 transition shadow-xl shadow-primary/20">Send Message</button>
+              <input
+                type="text"
+                placeholder="Name"
+                class="w-full px-8 py-5 rounded-2xl bg-white border-none focus:ring-2 focus:ring-primary transition font-semibold shadow-sm"
+              />
+              <input
+                type="email"
+                placeholder="E-mail"
+                class="w-full px-8 py-5 rounded-2xl bg-white border-none focus:ring-2 focus:ring-primary transition font-semibold shadow-sm"
+              />
+              <input
+                type="tel"
+                placeholder="Phone"
+                class="w-full px-8 py-5 rounded-2xl bg-white border-none focus:ring-2 focus:ring-primary transition font-semibold shadow-sm"
+              />
+              <button
+                class="w-full bg-primary text-white py-6 rounded-2xl font-black uppercase tracking-widest hover:bg-primary/90 transition shadow-xl shadow-primary/20"
+              >
+                Send Message
+              </button>
             </form>
           </div>
-          <div class="hidden md:flex w-1/2 bg-white-900 items-center justify-center p-20">
-            <img src="assets/images/2-2.png" class="w-68 opacity-100" alt="Logo" />
+          <div
+            class="hidden md:flex w-1/2 bg-white-900 items-center justify-center p-20"
+          >
+            <img
+              src="assets/images/2-2.png"
+              class="w-68 opacity-100"
+              alt="Logo"
+            />
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
-    <footer class="py-24 bg-white border-t border-gray-100">
+    <footer class="py-5 md:py-24 bg-white border-t border-gray-100">
       <div class="max-w-7xl mx-auto px-6 text-center">
-        <img class="w-10 mx-auto mb-10 opacity-30" src="assets/images/2-2.png" alt="Footer Logo" />
-        <p class="text-gray-400 text-[12px] font-bold tracking-[0.4em] uppercase">© Copyright 2025 Langitlangit.id - All Rights Reserved</p>
+        <img
+          class="w-10 mx-auto mb-10 opacity-30"
+          src="assets/images/2-2.png"
+          alt="Footer Logo"
+        />
+        <p
+          class="text-gray-400 text-[12px] font-bold tracking-[0.4em] uppercase"
+        >
+          © Copyright 2025 Langitlangit.id - All Rights Reserved
+        </p>
       </div>
     </footer>
 
@@ -791,8 +1519,10 @@
           mouseDrag: true,
           responsive: { 640: { items: 2 }, 1024: { items: 3 } },
         });
-        document.getElementById("testi-prev").onclick = () => imageSlider.goTo("prev");
-        document.getElementById("testi-next").onclick = () => imageSlider.goTo("next");
+        document.getElementById("testi-prev").onclick = () =>
+          imageSlider.goTo("prev");
+        document.getElementById("testi-next").onclick = () =>
+          imageSlider.goTo("next");
 
         // Tabs Logic & Video Slider
         const tabs = document.querySelectorAll(".testi-tab");
@@ -829,8 +1559,10 @@
                   mouseDrag: true,
                   responsive: { 640: { items: 2 }, 1024: { items: 3 } },
                 });
-                document.getElementById("testi-video-prev").onclick = () => videoSlider.goTo("prev");
-                document.getElementById("testi-video-next").onclick = () => videoSlider.goTo("next");
+                document.getElementById("testi-video-prev").onclick = () =>
+                  videoSlider.goTo("prev");
+                document.getElementById("testi-video-next").onclick = () =>
+                  videoSlider.goTo("next");
               }
             }
           });
